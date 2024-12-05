@@ -1,0 +1,127 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'main/css/quiz_form.css' %}">
+
+<div class="quiz" onclick="closeQuizModal()">
+    <div class="quiz-modal" onclick="event.stopPropagation()">
+        <div class="top">
+            <button onclick="closeQuizModal()" class="close"><img src="/static/img/close.svg" alt="Закрыть"></button>
+        </div>
+        <div class="cont stage1 show">
+            <div class="header">
+                <div class="title">
+                    <span>Подбор</span> авто
+                </div>
+                <div class="description">
+                    Ответьте на 3 вопроса и мы вышлем Вам подходящие<br>варианты авто с ценами!
+                </div>
+            </div>
+            <form>
+                <div class="title">какой бюджет планируете потратить на авто? <span>1/3</span></div>
+                <div class="input-range-container">
+                    <div class="slider-container">
+                        <input type="range" id="slider" min="650000" max="10000000" value="1700000" step="50000" class="quiz_price" style="background: linear-gradient(to right, rgb(253, 85, 75) 10.893%, white 10.893%);">
+                        <div id="slider-value" class="slider-value" style="left: calc(10.893% + 5.5px);">1.700.000</div>
+                        <div class="values">
+                            <span>650.000</span>
+                            <span>10.000.000</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="buttons">
+                    <button class="back" type="button">Назад</button>
+                    <button onclick="changeStage(1, 2)" class="next" type="button">След. вопрос</button>
+                </div>
+            </form>
+        </div>
+        <div class="cont stage2">
+            <div class="header">
+                <div class="title">
+                    <span>Подбор</span> авто
+                </div>
+                <div class="description">
+                    Ответьте на 3 вопроса и мы вышлем Вам подходящие<br>варианты авто с ценами!
+                </div>
+            </div>
+            <form>
+                <div class="title">Какие марки авто вы рассматриваете? <span>2/3</span></div>
+                <textarea name="question-2" placeholder="Если не определились, оставьте это поле пустым" cols="30" rows="10" class="quiz_marks"></textarea>
+                <div class="buttons">
+                    <button onclick="changeStage(2, 1)" class="back" type="button">Назад</button>
+                    <button onclick="changeStage(2, 3)" class="next" type="button">След. вопрос</button>
+                </div>
+            </form>
+        </div>
+        <div class="cont stage3">
+            <div class="header">
+                <div class="title">
+                    <span>Подбор</span> авто
+                </div>
+                <div class="description">
+                    Ответьте на 3 вопроса и мы вышлем Вам подходящие<br>варианты авто с ценами!
+                </div>
+            </div>
+            <form style="padding-top: 33px;">
+                <div class="title">Можете указать год, комплектацию, цвет и то, <br>что считаете нужным <span style="margin-top: -15px;">3/3</span></div>
+                <textarea style="margin-top: 15px" name="question-2" placeholder="Если не определились, оставьте это поле пустым" cols="30" rows="10" class="quiz_description"></textarea>
+                <div class="buttons">
+                    <button onclick="changeStage(3, 2)" class="back" type="button">Назад</button>
+                    <button onclick="changeStage(3, 4)" class="next" type="button">Получить варианты</button>
+                </div>
+            </form>
+        </div>
+        <div class="cont stage4">
+            <div class="header">
+                <div class="title">
+                    <span>Подбор</span> авто
+                </div>
+                <div class="description">
+                    Наши менеджеры доступны 24/7. <br>Мы сразу же начнем искать подходящие варианты!
+                </div>
+            </div>
+            <form class="send_form">
+                <input type="hidden" name="csrfmiddlewaretoken" value="jCGmLxy8Y2xvBrmQBxlAppgCUiHkchmH7F8P2X6vLRSwosvWV9RyhsNrIaQ8X3Ro">
+                <div class="contacts">
+                    <label>
+                        <p>Имя</p>
+                        <input required="" pattern="^[A-Za-zА-Яа-яЁё\s]+$" maxlength="20" placeholder="Введите имя" name="name" type="text" class="quiz_name">
+                    </label>
+                    <label>
+                        <p>Телефон</p>
+                        <input title="Формат: '+7 999 999 99 99' и номер не должен начинаться с 8 или 7 после кода +7" required="" pattern="^\+7 [0-6,9]\d{2} \d{3} \d{2} \d{2}$" placeholder="+7" name="phone" type="tel" class="quiz_phone">
+                    </label>
+                </div>
+
+                <div class="buttons">
+                    <button onclick="changeStage(4, 3)" class="back" type="button">Назад</button>
+                    <button class="next" type="submit">Отправить</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="cont stage5">
+            <div class="header">
+                <div class="title">
+                    <span>Подбор</span> авто
+                </div>
+                <div class="description">
+                    Наши менеджеры доступны 24/7. <br>Мы сразу же начнем искать подходящие варианты!
+                </div>
+            </div>
+            <form>
+                <div class="text">
+                    <div class="title">Вашей заявкой уже занялся наш менеджер! <br>Скоро он Вам перезвонит</div>
+                    <div class="bottom-text">Можете подробнее узнать о нас в наших <span>соц. сетях</span> или перейти на <span>главную страницу</span>, там Вы можете посмотреть Авто, которые мы привезли, узнать больше о нашей команде и посмотреть наши отзывы</div>
+                </div>
+
+                <div class="buttons">
+                    <button onclick="changeStage(5, 4)" class="back" type="button">Назад</button>
+                    <button onclick="closeQuizModal()" class="next" type="button">На главную</button>
+                </div>
+            </form>
+
+        </div>
+
+        <div class="bottom-line"></div>
+    </div>
+
+</div>

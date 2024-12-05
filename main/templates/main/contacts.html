@@ -1,0 +1,67 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'main/css/questionnaire_form.css' %}">
+
+<section class="contacts">
+      <div class="contact_row">
+          <div class="contact_left">
+              <div class="title">
+                  <h2>Контактная информация
+                      <img src="/static/main/img/contact_title_image.webp" alt="Контактная информация">
+                  </h2>
+              </div>
+              <p class="section_description">Оставьте свою заявку и наш менеджер свяжется с Вами для уточнения деталей.</p>
+              <div class="contact_item">
+                  <p>Звонок по России бесплатный</p>
+                  <a href="tel:+8 (800) 775-67-29">8 (800) 775-67-29</a>
+              </div>
+              <div class="contact_item">
+                  <p>WhatsApp</p>
+                  <a href="https://wa.me/79244202432" target="_blank">+7 924 420-24-32</a>
+              </div>
+              <div class="contact_item">
+                  <p>Офис</p>
+                  <div>г. Владивосток, ​ул. Жигура 9в, 1 этаж, офис 1</div>
+              </div>
+          </div>
+          <form class="contact_form" id="contactForm" method="post" action="">
+              <input type="hidden" name="csrfmiddlewaretoken" value="0o1hAnqbeZktYkHK5s0IKkRr8gphkWjGOrtKRNYy1OFuLlQQp4wGCnogW8y55IOn">
+              <div class="form_group">
+                  <label>
+                      <p>Имя</p>
+                      <input type="text" name="name" placeholder="Введите имя" pattern="^[A-Za-zА-Яа-яЁё\s]+$" title="Имя должно содержать только буквы и пробелы." maxlength="20" required="" aria-describedby="id_name_helptext" id="id_name">
+                  </label>
+                  <label>
+                      <p>Телефон</p>
+                      <input type="tel" name="phone_number" placeholder="+7" pattern="^\+7 [0-6,9]\d{2} \d{3} \d{2} \d{2}$" title="Формат: '+7 999 999 99 99' и номер не должен начинаться с 8 или 7 после кода +7" maxlength="16" required="" aria-describedby="id_phone_number_helptext" id="id_phone_number">
+                  </label>
+              </div>
+              <div class="form_group">
+                  <label>
+                      <p>Уточните свой вопрос</p>
+                      <textarea name="content" cols="40" rows="10" placeholder="Введите текст сообщения, укажите страну, марку и год машины." maxlength="200" id="id_content"></textarea>
+                  </label>
+              </div>
+              <div class="form_group">
+                  <label>
+                      <span class="checkmark"></span>
+                      <input type="checkbox" name="privacy_policy_agreed" required="" id="id_privacy_policy_agreed" checked="">
+                      <p>С <a target="_blank" href="/static/files/%D0%9F%D0%BE%D0%BB%D0%B8%D1%82%D0%B8%D0%BA%D0%B0%20%D0%BA%D0%BE%D0%BD%D1%84%D0%B8%D0%B4%D0%B5%D0%BD%D1%86%D0%B8%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE%D1%81%D1%82%D0%B8%20tomiko-trade.pdf">правилами политики конфиденциальности</a> ознакомлен</p>
+                  </label>
+              </div>
+              <div class="form_group">
+                  <button type="submit" name="submit">Отправить</button>
+              </div>
+          </form>
+    </div>
+
+    <div class="position-fixed top-0 end-0 p-3" style="z-index: 11">
+        <div id="liveToast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+                <img src="/static/img/modal_logo.webp" alt="logo">
+            </div>
+            <div class="toast-body">
+                Вы оставили свой запрос, скоро мы свяжемся с Вами!
+            </div>
+        </div>
+    </div>
+</section>
