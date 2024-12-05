@@ -1,0 +1,211 @@
+.subscribe .subscribe_item img {
+    aspect-ratio: 1 / 1;
+    width: 16px;
+    height: 16px
+}
+
+.subscribe .subscribe_item .subscribe_item_img img {
+    aspect-ratio: 1 / 1;
+    width: 24px;
+    height: 24px
+}
+
+.subscribe {
+    margin: 0 0 174px 0;
+    padding: 80px 0 0 0
+}
+
+.subscribe .subscribe_row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 144px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border-radius: 28px;
+    background: #081e36;
+    padding: 0 140px 0 0;
+    position: relative;
+    z-index: 1
+}
+
+.subscribe .subscribe_row .subscribe_right {
+    padding-block:40px}
+
+.subscribe .subscribe_row::after {
+    position: absolute;
+    content: "";
+    width: 90%;
+    height: 87px;
+    left: 50%;
+    bottom: -12px;
+    -webkit-transform: translate(-50%,0) rotate(-1deg);
+    transform: translate(-50%,0) rotate(-1deg);
+    background-color: #d51117;
+    border-radius: 28px;
+    z-index: -2
+}
+
+.subscribe .subscribe_row::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: #081e36;
+    border-radius: 28px;
+    z-index: -1
+}
+
+.subscribe .subscribe_image {
+    margin: -100px 0 -80px 0;
+    width: 505px;
+    aspect-ratio: 505 / 693
+}
+
+.subscribe .title {
+    margin: 0 0 32px 0
+}
+
+.subscribe .title h2 {
+    font-family: Bebas-Neue,Arial,sans-serif;
+    font-size: 70px;
+    font-weight: 700;
+    line-height: normal;
+    color: #FFF
+}
+
+.subscribe .title h2 span {
+    color: #fd554b
+}
+
+.subscribe .subscribe_item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    gap: 24px;
+    font-family: Inter;
+    font-size: 24px;
+    font-weight: 300;
+    color: #FFF;
+    margin: 0 0 12px 0
+}
+
+.subscribe .subscribe_item:last-child {
+    margin: 0
+}
+
+.subscribe .subscribe_item div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    gap: 8px
+}
+
+.subscribe .subscribe_item .subscribe_item_img {
+    width: 44px;
+    height: 44px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    border-radius: 12px;
+    background: rgba(255,255,255,0.2)
+}
+
+@media only screen and (max-width: 1200px) {
+    .subscribe .subscribe_row {
+        gap:40px
+    }
+
+    .subscribe .title h2 {
+        font-size: 60px
+    }
+
+    .subscribe .subscribe_image {
+        max-width: 450px;
+        margin: -50px 0 0 0
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .subscribe .title h2 {
+        font-size:50px
+    }
+
+    .subscribe .subscribe_image {
+        max-width: 380px
+    }
+
+    .subscribe .title {
+        margin: 0 0 24px 0
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .subscribe .subscribe_row {
+        -webkit-box-orient:vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        gap: 0;
+        padding: 0
+    }
+
+    .subscribe_right {
+        padding: 0 20px 20px 20px
+    }
+
+    .subscribe .subscribe_image {
+        margin: -100px 0 0 0
+    }
+
+    .subscribe {
+        margin: 0 0 100px 0
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .subscribe_right {
+        margin:-44px 0 0 0;
+        padding: 0 16px 16px 16px;
+        width: 100%
+    }
+
+    .subscribe .title {
+        margin: 0 0 16px 0
+    }
+
+    .subscribe .title h2 {
+        font-size: 24px
+    }
+
+    .subscribe .subscribe_item {
+        gap: 12px
+    }
+
+    .subscribe .subscribe_item {
+        font-size: 16px
+    }
+
+    .subscribe .subscribe_row {
+        border-radius: 16px
+    }
+
+    .subscribe .subscribe_row::before {
+        border-radius: 16px
+    }
+}

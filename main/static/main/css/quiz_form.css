@@ -1,0 +1,369 @@
+.quiz {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.6);
+    z-index: 30;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s,opacity .3s ease-in-out
+}
+
+.quiz.show {
+    visibility: visible;
+    opacity: 1;
+    transition: visibility 0s,opacity .3s ease-in-out
+}
+
+.quiz .quiz-modal {
+    transform: translateY(-20px);
+    transition: transform .3s ease-in-out
+}
+
+.quiz.show .quiz-modal {
+    transform: translateY(0)
+}
+
+.quiz .quiz-modal {
+    width: 90%;
+    max-width: 750px
+}
+
+.quiz .quiz-modal .top {
+    width: 100%;
+    display: flex;
+    justify-content: right;
+    padding-bottom: 10px
+}
+
+.quiz .quiz-modal button {
+    border: 0;
+    outline: 0;
+    background: #081e36;
+    border-radius: 30px;
+    width: 26px;
+    height: 26px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.quiz .quiz-modal .top button img {
+    width: 14px;
+    height: 14px
+}
+
+.quiz .quiz-modal .cont {
+    width: 100%;
+    border-radius: 28px;
+    background: #081e36;
+    padding: 20px;
+    display: none
+}
+
+.quiz .quiz-modal .cont.show {
+    display: block
+}
+
+.quiz .quiz-modal .header {
+    display: flex;
+    align-items: center;
+    flex-direction: column
+}
+
+.quiz .quiz-modal .header button {
+    background-color: inherit;
+    border: 0;
+    outline: 0;
+    display: block;
+    margin-left: auto;
+    padding: 3px
+}
+
+.quiz .quiz-modal .header button img {
+    width: 15px;
+    height: 15px
+}
+
+.quiz .quiz-modal .header .title {
+    font-family: Bebas-Neue,Arial,sans-serif;
+    font-size: 66px;
+    font-weight: 600;
+    line-height: 70px;
+    text-align: left;
+    text-transform: uppercase;
+    color: #fff
+}
+
+.quiz .quiz-modal .header .title span {
+    color: #fd554b
+}
+
+.quiz .quiz-modal .header .description {
+    font-family: Inter;
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 27px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #FFFFFF80
+}
+
+.quiz .quiz-modal form {
+    padding-inline:20px;padding-top: 50px
+}
+
+.quiz .quiz-modal form .title {
+    font-family: Bebas-Neue,Arial,sans-serif;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 32px;
+    text-align: left;
+    text-transform: uppercase;
+    color: #fff
+}
+
+.quiz .quiz-modal form .title span {
+    float: right
+}
+
+.quiz .quiz-modal form textarea {
+    width: 100%;
+    height: 120px;
+    border-radius: 16px;
+    background: #20344a;
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #fff;
+    outline: 0;
+    border: 0;
+    padding: 16px;
+    resize: none;
+    margin-top: 30px;
+    margin-bottom: 40px
+}
+
+.quiz .quiz-modal form textarea::-webkit-input-placeholder {
+    color: #FFFFFF80
+}
+
+.quiz .quiz-modal form .buttons {
+    display: flex;
+    justify-content: space-between
+}
+
+.quiz .quiz-modal form .buttons button {
+    background: #20344a;
+    width: 201px;
+    height: 60px;
+    border-radius: 60px;
+    border: 0;
+    outline: 0;
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 21.78px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.quiz .quiz-modal form .buttons .back {
+    opacity: .5
+}
+
+.quiz .quiz-modal form .input-range-container {
+    margin: auto;
+    width: calc(100% - 40px);
+    height: 195.6px;
+    display: flex;
+    align-items: center
+}
+
+.quiz .quiz-modal form .input-range-container input {
+    width: 100%
+}
+
+.quiz .quiz-modal form .contacts {
+    height: 227.6px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px
+}
+
+.quiz .quiz-modal form .contacts label {
+    display: block;
+    width: 100%
+}
+
+.quiz .quiz-modal form .contacts p {
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 400;
+    color: #FFF;
+    margin: 0 0 8px 0
+}
+
+.quiz .quiz-modal form .contacts input {
+    border-radius: 32px;
+    background: #20344a;
+    border: 0;
+    outline: 0;
+    color: #FFF;
+    font-family: Inter;
+    line-height: normal;
+    padding: 16px;
+    font-size: 16px;
+    font-weight: 400;
+    width: 100%
+}
+
+.quiz .quiz-modal form input::placeholder,.quiz .quiz-modal form textarea::placeholder {
+    color: rgba(255,255,255,0.5)
+}
+
+.quiz .quiz-modal form input[type=tel]::placeholder {
+    color: #FFF
+}
+
+.quiz .quiz-modal form .text {
+    height: 227.6px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px
+}
+
+.quiz .quiz-modal form .text .title {
+    text-align: center
+}
+
+.quiz .quiz-modal form .text .bottom-text {
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    text-align: center;
+    color: #FFFFFF80
+}
+
+.quiz .quiz-modal form .slider-container {
+    position: relative;
+    width: 100%
+}
+
+.quiz .quiz-modal form input[type="range"] {
+    width: 100%;
+    -webkit-appearance: none;
+    appearance: none;
+    height: 3px;
+    background: white;
+    border-radius: 3px;
+    outline: 0;
+    cursor: pointer;
+    transition: background .3s ease
+}
+
+.quiz .quiz-modal form input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background-color: #fd554b;
+    border: 0;
+    border-radius: 50%
+}
+
+.quiz .quiz-modal form .slider-value {
+    position: absolute;
+    margin-top: -70px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 129px;
+    height: 40px;
+    border-radius: 32px;
+    background: #20344a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    text-align: center;
+    color: #fff;
+    transition: left 0s ease
+}
+
+.quiz .quiz-modal form .input-range-container .values {
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    color: #FFFFFF80
+}
+
+@media only screen and (max-width: 700px) {
+    .quiz .quiz-modal .header .title {
+        font-size:28px
+    }
+
+    .quiz .quiz-modal .header .description {
+        font-size: 14px
+    }
+
+    .quiz .quiz-modal form .title {
+        font-size: 16px
+    }
+
+    .quiz .quiz-modal form .buttons button {
+        width: 130px;
+        height: 40px;
+        font-size: 14px;
+        font-weight: 600
+    }
+
+    .quiz .quiz-modal form .slider-value {
+        margin-left: -20px;
+        width: 89px;
+        height: 35px;
+        font-size: 14px
+    }
+
+    .quiz .quiz-modal form .input-range-container .values {
+        font-size: 14px
+    }
+
+    .quiz .quiz-modal form textarea {
+        font-size: 14px
+    }
+
+    .quiz .quiz-modal form .text .bottom-text {
+        font-size: 14px;
+        height: max-content
+    }
+
+    .quiz .quiz-modal form .text {
+        height: max-content
+    }
+
+    .quiz .quiz-modal form {
+        padding-top: 20px
+    }
+}

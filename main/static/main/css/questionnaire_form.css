@@ -1,0 +1,451 @@
+.contacts {
+    margin: 0 0 116px 0
+}
+
+.contacts .contact_row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 30px;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start
+}
+
+.contacts .contact_left {
+    max-width: 405px
+}
+
+.contacts .title {
+    margin: 0 0 12px 0
+}
+
+.contacts .title h2 {
+    font-family: Bebas-Neue,Arial,sans-serif;
+    font-size: 70px;
+    font-weight: 700;
+    line-height: 100%;
+    color: #FFF
+}
+
+.contacts .title img {
+    width: 63px;
+    height: 60px;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: center;
+    object-position: center
+}
+
+.contacts .section_description {
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 300;
+    color: rgba(255,255,255,0.5);
+    margin: 0 0 60px 0
+}
+
+.contacts .contact_item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    gap: 8px;
+    margin: 0 0 16px 0
+}
+
+.contacts .contact_item:last-child {
+    margin: 0
+}
+
+.contacts .contact_item p {
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: normal;
+    letter-spacing: -0.64px;
+    color: rgba(255,255,255,0.5)
+}
+
+.contacts .contact_item a,.contacts .contact_item div {
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: -0.72px;
+    color: #FFF
+}
+
+.contacts .contact_form {
+    padding: 40px;
+    border-radius: 28px;
+    background: #081e36
+}
+
+.contacts .contact_form .form_group {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 16px;
+    margin: 0 0 24px 0
+}
+
+.contacts .contact_form .form_group:last-child {
+    margin: 0
+}
+
+.contacts .contact_form .form_group label {
+    width: 100%
+}
+
+.contacts .contact_form .form_group label:first-child {
+    width: calc(50% - 8px)
+}
+
+.contacts .contact_form .form_group label:last-child {
+    width: 100%
+}
+
+.contacts .contact_form .form_group label+label {
+    width: calc(50% - 8px) !important
+}
+
+.contacts .contact_form .form_group p {
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 400;
+    color: #FFF;
+    margin: 0 0 8px 0
+}
+
+.contacts .contact_form .form_group input,.contacts .contact_form .form_group textarea,.contacts .contact_form .form_group button {
+    border-radius: 32px;
+    background: #20344a;
+    border: 0;
+    outline: 0;
+    color: #FFF;
+    font-family: Inter;
+    line-height: normal
+}
+
+.contacts .contact_form .form_group input,.contacts .contact_form .form_group textarea {
+    padding: 16px;
+    font-size: 16px;
+    font-weight: 400;
+    width: 100%
+}
+
+.contacts .contact_form .form_group input::-webkit-input-placeholder,.contacts .contact_form .form_group textarea::-webkit-input-placeholder {
+    color: rgba(255,255,255,0.5)
+}
+
+.contacts .contact_form .form_group input::-moz-placeholder,.contacts .contact_form .form_group textarea::-moz-placeholder {
+    color: rgba(255,255,255,0.5)
+}
+
+.contacts .contact_form .form_group input:-ms-input-placeholder,.contacts .contact_form .form_group textarea:-ms-input-placeholder {
+    color: rgba(255,255,255,0.5)
+}
+
+.contacts .contact_form .form_group input::-ms-input-placeholder,.contacts .contact_form .form_group textarea::-ms-input-placeholder {
+    color: rgba(255,255,255,0.5)
+}
+
+.contacts .contact_form .form_group input::placeholder,.contacts .contact_form .form_group textarea::placeholder {
+    color: rgba(255,255,255,0.5)
+}
+
+.contacts .contact_form .form_group input[type=tel]::-webkit-input-placeholder {
+    color: #FFF
+}
+
+.contacts .contact_form .form_group input[type=tel]::-moz-placeholder {
+    color: #FFF
+}
+
+.contacts .contact_form .form_group input[type=tel]:-ms-input-placeholder {
+    color: #FFF
+}
+
+.contacts .contact_form .form_group input[type=tel]::-ms-input-placeholder {
+    color: #FFF
+}
+
+.contacts .contact_form .form_group input[type=tel]::placeholder {
+    color: #FFF
+}
+
+.contacts .contact_form .form_group textarea {
+    border-radius: 16px;
+    height: 100px;
+    resize: none
+}
+
+.contacts .contact_form .form_group label:has(input[type=checkbox]) {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    gap: 12px;
+    position: relative;
+    cursor: pointer
+}
+
+.contacts .contact_form .form_group label:has(input[type=checkbox]):has(input:checked) .checkmark::after {
+    opacity: 1
+}
+
+.contacts .contact_form .form_group label:has(input[type=checkbox]) input {
+    width: 30px;
+    opacity: 0;
+    position: absolute
+}
+
+.contacts .contact_form .form_group label:has(input[type=checkbox]) .checkmark {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: 24px;
+    height: 24px;
+    border-radius: 8px;
+    background-color: #FFF;
+    position: relative
+}
+
+.contacts .contact_form .form_group label:has(input[type=checkbox]) .checkmark::after {
+    position: absolute;
+    content: "";
+    width: 9px;
+    height: 14px;
+    left: 8px;
+    top: 5px;
+    border-width: 1px;
+    border-color: #000;
+    border-bottom: solid;
+    border-right: solid;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    opacity: 0;
+    -webkit-transition: .3s all ease;
+    transition: .3s all ease
+}
+
+.contacts .contact_form .form_group label:has(input[type=checkbox]) p {
+    margin: 0
+}
+
+.contacts .contact_form .form_group label:has(input[type=checkbox]) p a {
+    color: #fd554b
+}
+
+.contacts .contact_form .form_group button {
+    width: 100%;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 25px 0;
+    border-radius: 60px
+}
+
+@media only screen and (max-width: 992px) {
+    .contacts .contact_row {
+        -webkit-box-orient:vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column
+    }
+
+    .contacts .contact_left {
+        max-width: 100%
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .contacts {
+        margin:0 0 80px 0
+    }
+
+    .contacts .title h2 {
+        font-size: 40px
+    }
+
+    .contacts .title span {
+        font-size: 50px
+    }
+
+    .contacts .section_description {
+        margin: 0 0 24px 0
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .contacts .title img {
+        width:28px;
+        height: 28px
+    }
+
+    .contacts .contact_form {
+        padding: 16px 12px;
+        border-radius: 16px
+    }
+
+    .contacts .contact_form .form_group {
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        margin: 0 0 16px 0
+    }
+
+    .contacts .contact_form .form_group label:first-child,.contacts .contact_form .form_group label+label {
+        width: 100% !important
+    }
+
+    .contacts .contact_form .form_group input,.contacts .contact_form .form_group textarea {
+        padding: 15px 12px
+    }
+
+    .contacts .contact_form .form_group button {
+        font-size: 16px;
+        padding: 12px 0
+    }
+
+    .contacts {
+        margin: 0 0 40px 0
+    }
+
+    .contacts .title h2 {
+        font-size: 24px
+    }
+
+    .contacts .title span {
+        font-size: 28px
+    }
+}
+
+.modal_form_back .contacts {
+    margin: 0
+}
+
+.toast .toast-header img {
+    height: 30px;
+    width: 80px
+}
+
+.toast .toast-header {
+    display: flex;
+    justify-content: space-between
+}
+
+.toast {
+    background-color: #081e36;
+    color: white
+}
+
+.toast .toast-header {
+    background-color: #20344a
+}
+
+.toast .toast-header button:focus,.toast .toast-header button:active {
+    outline: none !important;
+    box-shadow: none
+}
+
+.modal_form_back {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.6);
+    z-index: 20;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s,opacity .3s ease-in-out
+}
+
+.modal_form_back.show {
+    visibility: visible;
+    opacity: 1;
+    transition: visibility 0s,opacity .3s ease-in-out
+}
+
+.modal_form {
+    padding: 20px;
+    transform: translateY(-20px);
+    transition: transform .3s ease-in-out
+}
+
+.modal_form_back.show .modal_form {
+    transform: translateY(0)
+}
+
+.contact_form button:disabled {
+    cursor: not-allowed
+}
+
+.modal_form .top {
+    width: 100%;
+    display: flex;
+    justify-content: right;
+    padding-bottom: 10px
+}
+
+.modal_form .top button {
+    border: 0;
+    outline: 0;
+    background: #081e36;
+    border-radius: 30px;
+    width: 26px;
+    height: 26px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.modal_form .top button img {
+    width: 14px;
+    height: 14px
+}
+
+.form_title {
+    width: 100%;
+    max-width: 520px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px
+}
+
+.form_title .title {
+    font-family: "Bebas-Neue";
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 40px;
+    color: #fff;
+    margin: 0
+}
+
+.form_title .text {
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.36px;
+    text-align: left;
+    color: #fff;
+    padding-bottom: 24px;
+    margin-bottom: 24px;
+    border-bottom: 1px solid #FFFFFF1A
+}

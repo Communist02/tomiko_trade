@@ -1,0 +1,166 @@
+.logos_brand {
+    background-color: #011224;
+    margin-bottom: 52px
+}
+
+.logos_brand .logo-carousel {
+    width: 100%;
+    overflow: hidden;
+    padding: 10px 0
+}
+
+.logos_brand .logo-track {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-animation: scroll 200s linear infinite;
+    animation: scroll 200s linear infinite
+}
+
+.logos_brand .logo-track img {
+    height: 100px;
+    margin: 0 20px;
+    -webkit-transition: -webkit-transform .3s ease;
+    transition: -webkit-transform .3s ease;
+    transition: transform .3s ease;
+    transition: transform .3s ease,-webkit-transform .3s ease
+}
+
+.logos_brand .logo-track img:hover {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2)
+}
+
+.logos_brand2 .logo-track img:hover {
+    -webkit-transform: none;
+    transform: none
+}
+
+.logos_brand2 {
+    margin-bottom: -10px
+}
+
+.logos_brand2 .logo-track img {
+    height: 39px;
+    margin: 0
+}
+
+@-webkit-keyframes scroll {
+    0% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0)
+    }
+
+    100% {
+        -webkit-transform: translateX(-100%);
+        transform: translateX(-100%)
+    }
+}
+
+@keyframes scroll {
+    0% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0)
+    }
+
+    100% {
+        -webkit-transform: translateX(-100%);
+        transform: translateX(-100%)
+    }
+}
+
+.marquee img {
+    -webkit-transition: -webkit-transform .3s ease;
+    transition: -webkit-transform .3s ease;
+    transition: transform .3s ease;
+    transition: transform .3s ease,-webkit-transform .3s ease;
+    width: 100px;
+    height: 100px
+}
+
+.marquee2 img {
+    width: 2024px;
+    height: 40px;
+    aspect-ratio: 521 / 10
+}
+
+.marquee3 img {
+    width: 1820px;
+    height: 40px;
+    aspect-ratio: 521 / 10
+}
+
+.marquee img:hover {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2)
+}
+
+.marquee button {
+    padding: 0;
+    background-color: inherit;
+    border: 0;
+    outline: 0;
+    margin-inline:20px;transition: transform .3s ease;
+    transition: transform .3s ease,-webkit-transform .3s ease
+}
+
+.marquee2 div {
+    background-color: #d51117
+}
+
+.marquee3 div {
+    background: #081e36
+}
+
+.red-line {
+    height: 40px;
+    background-color: #d51117;
+    color: white;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    text-align: left;
+    display: flex;
+    align-items: center
+}
+
+span.red-line {
+    width: 40px;
+    justify-content: center;
+    color: #FFFFFF66;
+    font-weight: 400
+}
+
+.blue-line {
+    height: 40px;
+    background: #081e36;
+    color: white;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    text-align: left;
+    display: flex;
+    align-items: center
+}
+
+span.blue-line {
+    width: 40px;
+    justify-content: center;
+    color: #FFFFFF66;
+    font-weight: 400
+}
+
+.red-line,.blue-line {
+    cursor: pointer
+}
+
+.red-line:hover,.blue-line:hover {
+    color: white
+}

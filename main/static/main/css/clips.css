@@ -1,0 +1,133 @@
+.clips {
+    padding: 60px 0 100px 0;
+    margin: 0 0 80px 0;
+    position: relative;
+    z-index: 1
+}
+
+.clips::after {
+    position: absolute;
+    content: "";
+    left: 50%;
+    top: 48%;
+    width: 120%;
+    height: 70%;
+    background: linear-gradient(95deg,#0d2f68 0,#d51117 100%);
+    -webkit-transform: rotate(-3deg) translate(-50%,-62%);
+    transform: rotate(-3deg) translate(-50%,-62%);
+    -webkit-clip-path: polygon(0 0,100% 0,100% 95%,0 100%);
+    clip-path: polygon(0 0,100% 0,100% 95%,0 100%);
+    z-index: -1
+}
+
+.clips .title h2 {
+    font-family: Bebas-Neue,Arial,sans-serif;
+    font-size: 70px;
+    font-weight: 700;
+    line-height: 70px;
+    text-align: left;
+    color: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center
+}
+
+.clips .section_top {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin: 0 0 24px 0
+}
+
+.clips .clips_link {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    border-radius: 30px;
+    background: rgba(255,255,255,0.1);
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 140%;
+    color: #FFF
+}
+
+.clips .clips_swiper {
+    overflow: visible
+}
+
+.clips .clips_swiper .swiper-slide {
+    width: auto
+}
+
+.clips .clips_swiper .swiper-slide img {
+    width: 150px;
+    height: 264px;
+    border-radius: 16px
+}
+
+.clips .clips_swiper .swiper-wrapper {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center
+}
+
+.clips .title img {
+    aspect-ratio: 1 / 1;
+    width: 70px;
+    height: 70px
+}
+
+@media only screen and (max-width: 768px) {
+    .clips .clips_swiper .swiper-wrapper {
+        -webkit-box-pack:start;
+        -ms-flex-pack: start
+    }
+
+    .clips .title h2 {
+        font-size: 40px;
+        line-height: normal
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .clips .clips_link {
+        -webkit-box-pack:center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        margin: 24px 0 0 0
+    }
+
+    .clips::after {
+        -webkit-transform: rotate(-3deg) translate(-50%,-48%);
+        transform: rotate(-3deg) translate(-50%,-48%);
+        height: 83%
+    }
+
+    .clips {
+        padding: 45px 0 70px 0;
+        margin: 0
+    }
+
+    .clips .title h2 {
+        font-size: 24px
+    }
+
+    .clips .title img {
+        width: 24px;
+        height: 24px
+    }
+}
