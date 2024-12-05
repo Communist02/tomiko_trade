@@ -1,0 +1,71 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'main/css/stage_work.css' %}">
+
+<div class="stage_work">
+    <div class="stage_block">
+        <div class="title">
+            <h2><span>Этапы</span> работы</h2>
+            <p>Прозрачное ценообразование с подробным <br> разъяснением затрат на каждом этапе</p>
+        </div>
+        <div class="itesm_stages">
+            <div class="item">
+                <img loading="lazy" src="/static/img/work1.webp" alt="work1">
+                <div>
+                    <h3><span>Заявка</span></h3>
+                    <p><span>Оставьте заявку и получите бесплатную консультацию персонального менеджера. Вам отправят
+                            свежие варианты из статистики, рассчитают ориентировочную стоимость автомобиля и ответят на
+                            все сопутствующие вопросы о покупке автомобиля.</span></p>
+                </div>
+                <img loading="lazy" class="line_img" src="/static/img/line1.svg" alt="line1">
+            </div>
+            <div class="item">
+                <img loading="lazy" src="/static/img/work2.webp" alt="work2">
+                <div>
+                    <h3><span>Договор</span></h3>
+                    <p><span>Если Вас все устроило, заключаем договор. Вы вносите авансовый депозит и менеджер по
+                            покупкам начинает активные действия по подбору автомобиля.</span></p>
+                </div>
+                <img loading="lazy" class="line_img line_img2" src="/static/img/line2.svg" alt="line2">
+            </div>
+            <div class="item">
+                <img loading="lazy" src="/static/img/work3.webp" alt="work3">
+                <div>
+                    <h3><span>Подбор и покупка авто</span></h3>
+                    <p><span>Ежедневно менеджер по покупке просматривает доступные лоты и отправляет Вам варианты на
+                            согласование до тех пор, пока не будет найден подходящий. Менеджер отправляет точный расчет
+                            цены согласованного варианта по курсам на день покупки и мы покупаем автомобиль.</span></p>
+                </div>
+                <img loading="lazy" class="line_img" src="/static/img/line2.svg" alt="line2">
+            </div>
+            <div class="item">
+                <img loading="lazy" src="/static/img/work4.webp" alt="work4">
+                <div>
+                    <h3><span>Доставка и отправка</span></h3>
+                    <p><span>Доставляем автомобиль во Владивосток, проходим этапы оформления и отправляем его в Ваш
+                            город любым удобным способом.</span></p>
+                </div>
+                <img loading="lazy" class="line_img" src="/static/img/line2.svg" alt="line2">
+            </div>
+        </div>
+        <div class="btns_stage">
+            <div class="btns_a">
+                <button onclick="openQuestionnaireForm(event)">Получить консультацию</button>
+            </div>
+            <a href="https://wa.me/79244202432" target="_blank"><img loading="lazy" src="/static/img/w1.svg"
+                    alt="whatsapp"></a>
+        </div>
+    </div>
+    <div class="save_discount">
+        <div>
+            <p>Экономия до <span>30%</span></p>
+            <span>от рынка авто в наличии</span>
+        </div>
+        <a href="#" aria-label="Открыть карточку">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path
+                    d="M14.0306 8.53074L9.53063 13.0307C9.38973 13.1716 9.19863 13.2508 8.99938 13.2508C8.80012 13.2508 8.60902 13.1716 8.46813 13.0307C8.32723 12.8898 8.24807 12.6987 8.24807 12.4995C8.24807 12.3002 8.32723 12.1091 8.46813 11.9682L11.6875 8.75011H2.5C2.30109 8.75011 2.11032 8.67109 1.96967 8.53044C1.82902 8.38979 1.75 8.19902 1.75 8.00011C1.75 7.8012 1.82902 7.61043 1.96967 7.46978C2.11032 7.32913 2.30109 7.25011 2.5 7.25011H11.6875L8.46937 4.03011C8.32848 3.88921 8.24932 3.69812 8.24932 3.49886C8.24932 3.2996 8.32848 3.10851 8.46937 2.96761C8.61027 2.82671 8.80137 2.74756 9.00062 2.74756C9.19988 2.74756 9.39098 2.82671 9.53187 2.96761L14.0319 7.46761C14.1018 7.53738 14.1573 7.62028 14.1951 7.71155C14.2329 7.80281 14.2523 7.90065 14.2522 7.99943C14.252 8.09822 14.2324 8.19601 14.1944 8.28718C14.1564 8.37836 14.1007 8.46113 14.0306 8.53074Z"
+                    fill="white" style="--darkreader-inline-fill: #e8e6e3;" data-darkreader-inline-fill=""></path>
+            </svg>
+        </a>
+    </div>
+</div>

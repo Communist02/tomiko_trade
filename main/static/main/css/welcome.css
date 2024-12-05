@@ -1,0 +1,232 @@
+.welcome {
+    padding: 130px 0 40px 0;
+    position: relative;
+}
+
+.bottom_welcome {
+    position: relative;
+    z-index: 1;
+    border-bottom: 1px solid #344150;
+    padding-bottom: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    padding: 10px;
+}
+
+.bg_image {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    max-width: 100%;
+    max-height: 100%;
+    transform: translate(-50%, -50%);
+    aspect-ratio: 942 / 517;
+}
+
+.welcome_title {
+    position: relative;
+    z-index: 100;
+    text-align: center;
+    margin-bottom: 233px;
+}
+
+.welcome_title > h1 {
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 76.8px;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
+.welcome_title > p {
+    font-family: Inter;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 36px;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 48px;
+    padding: 0 25%;
+}
+
+.welcome_title > button {
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 21.78px;
+    text-align: left;
+    color: #fff;
+    padding: 24px 40px;
+    background: linear-gradient(94.98deg, #0d2f68 0, #d51117 100%);
+    border-radius: 60px;
+    display: block;
+    border: 0;
+    outline: 0;
+    margin: auto;
+}
+
+.welcome .bottom_welcome .left_info {
+    display: flex;
+    align-items: center;
+}
+
+.bottom_welcome .left_info .item {
+    margin-right: 80px;
+    position: relative;
+}
+
+.bottom_welcome .left_info .item::before {
+    content: "";
+    position: absolute;
+    background-color: #2a3847;
+    height: 67px;
+    width: 2px;
+    right: -40px;
+}
+
+.welcome .bottom_welcome .left_info .item:last-child {
+    margin-right: 0;
+}
+
+.welcome .bottom_welcome .left_info .item:last-child::before {
+    content: none;
+}
+
+.welcome .bottom_welcome .left_info .item div {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 48px;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 4px;
+}
+
+.welcome .bottom_welcome .left_info .item div img {
+    margin-right: 12px;
+    aspect-ratio: 1 / 1;
+    height: 25px;
+    width: 25px;
+}
+
+.welcome .bottom_welcome .left_info .item p {
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.94px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.5019607843);
+}
+
+@media only screen and (max-width:992px) {
+    .welcome .bottom_welcome .left_info .item div {
+        font-size: 30px;
+    }
+
+    .welcome .bottom_welcome .card_discoint p {
+        font-size: 22px;
+        line-height: 30px;
+    }
+
+    .welcome .bottom_welcome .card_discoint p span {
+        font-size: 38px;
+        line-height: 40px;
+    }
+
+    .welcome .bottom_welcome .left_info .item {
+        margin-right: 45px;
+    }
+
+    .welcome .bottom_welcome .left_info .item::before {
+        right: -26px;
+    }
+}
+
+@media only screen and (max-width:768px) {
+    .welcome .bottom_welcome {
+        justify-content: center;
+    }
+
+    .welcome .welcome_title h1 {
+        font-size: 40px;
+        line-height: 120%;
+    }
+
+    .welcome {
+        background-size: 100%;
+        padding: 50px 0 40px 0;
+    }
+
+    .welcome .welcome_title p {
+        padding: 0 10%;
+        margin-bottom: 24px;
+        font-size: 20px;
+    }
+
+    .welcome .welcome_title button {
+        display: inline-block;
+        padding: 14px 40px;
+    }
+
+    .welcome .welcome_title {
+        margin-bottom: 60px;
+    }
+}
+
+@media only screen and (max-width:576px) {
+    .welcome {
+        padding: 24px 0;
+    }
+
+    .welcome .welcome_title h1 {
+        font-size: 24px;
+    }
+
+    .welcome .welcome_title p {
+        padding: 0;
+        font-size: 16px;
+        line-height: 150%;
+    }
+
+    .welcome .welcome_title button {
+        font-size: 16px;
+        line-height: normal;
+        width: 100%;
+        text-align: center;
+        padding: 12px 40px;
+    }
+
+    .welcome .welcome_title {
+        margin-bottom: 24px;
+    }
+
+    .welcome .bottom_welcome .left_info .item {
+        margin-right: 25px;
+    }
+
+    .welcome .bottom_welcome .left_info .item div {
+        font-size: 18px;
+        line-height: normal;
+    }
+
+    .welcome .bottom_welcome .left_info .item div img {
+        width: 16px;
+        height: 16px;
+    }
+
+    .welcome .bottom_welcome .left_info {
+        align-items: center;
+    }
+
+    .welcome .bottom_welcome .left_info .item::before {
+        height: 39px;
+        right: -13px;
+    }
+
+    .welcome .bottom_hero {
+        padding: 0;
+        border: 0;
+    }
+}

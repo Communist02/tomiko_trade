@@ -1,0 +1,65 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-links">
+            <img src="{% static 'main/img/logo.png' %}" width="80px">
+            <a>Авто</a>
+            <a>Акции</a>
+            <a>Контакты</a>
+        </div>
+        <div class="contacts">
+            <a>+7 (999) 678-56-56</a>
+            <img src="{% static 'main/img/telegram.svg' %}" width="40px">
+            <img src="{% static 'main/img/whatsapp.svg' %}" width="40px">
+        </div>
+    </header>
+    <div class="header-margin"></div>
+    {% block content %}
+    {% endblock %}
+    <footer class="footer">
+        <div class="footer-links">
+            <div>
+                <img src="{% static 'main/img/logo.png' %}" width="80px">
+                <div>
+                    <ul>
+                        <h3>КАТАЛОГ</h3>
+                        <li>Авто</li>
+                    </ul>
+                    <ul>
+                        <h3>КОМПАНИЯ</h3>
+                        <li>О компании</li>
+                        <li>Клипы</li>
+                        <li>Отзывы</li>
+                    </ul>
+                    <ul>
+                        <h3>&#8203</h3>
+                        <li>Условия работы</li>
+                        <li>Акции</li>
+                        <li>Контакты</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-contacts">
+                <p class="gray-text">Звонок по России бесплатный</p>
+                <p>+7 (999) 678-56-56</p>
+                <div>
+                    <img src="{% static 'main/img/telegram.svg' %}" width="40px">
+                    <img src="{% static 'main/img/whatsapp.svg' %}" width="40px">
+                </div>
+            </div>
+        </div>
+        <p>© 2024 ООО «Автоцентр-ВЛ» Автомобили под заказ из Кореи, Китая и Японии</p>
+    </footer>
+</body>
+
+</html>

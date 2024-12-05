@@ -1,0 +1,387 @@
+.stage_work {
+    margin: 10px;
+    margin-bottom: 80px
+}
+
+.stage_work .stage_block .itesm_stages img {
+    aspect-ratio: 1 / 1;
+    width: 52px;
+    height: 52px
+}
+
+.stage_work .stage_block .itesm_stages .line_img {
+    aspect-ratio: 203 / 2;
+    width: 203px;
+    height: 2px
+}
+
+.stage_work .btns_stage img {
+    aspect-ratio: 1 / 1;
+    width: 70px;
+    height: 70px
+}
+
+.stage_work .stage_block {
+    padding: 80px;
+    border-radius: 28px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    position: relative;
+    z-index: 2
+}
+
+.stage_work .stage_block::before {
+    position: absolute;
+    content: "";
+    inset: 0;
+    background-color: #07192e;
+    background-image: url(../img/stage1.webp);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    z-index: -1;
+    border-radius: 28px
+}
+
+.stage_work .stage_block::after {
+    position: absolute;
+    content: ""
+}
+
+.stage_work .title h2 {
+    font-family: Bebas-Neue, Arial, sans-serif;
+    font-size: 70px;
+    font-weight: 700;
+    line-height: 70px;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 16px
+}
+
+.stage_work .title h2 span {
+    color: #f8534a
+}
+
+.stage_work .title p {
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 27px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.5)
+}
+
+.stage_work .itesm_stages {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin-top: 80px
+}
+
+.stage_work .itesm_stages .item {
+    max-width: 259px;
+    position: relative
+}
+
+.stage_work .itesm_stages .item .line_img {
+    position: absolute;
+    top: 27px;
+    left: 77px
+}
+
+.stage_work .itesm_stages .item .line_img2 {
+    left: 62px
+}
+
+.stage_work .itesm_stages .item h3 {
+    font-family: Bebas-Neue, Arial, sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 32px;
+    text-align: left;
+    margin-bottom: 11px;
+    margin-top: 40px;
+    color: rgba(255, 255, 255, 0.6980392157)
+}
+
+.stage_work .itesm_stages .item h3 span {
+    color: #fff
+}
+
+.stage_work .itesm_stages .item p {
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 24px;
+    text-align: left;
+    color: rgba(255, 255, 255, 0.7)
+}
+
+.stage_work .itesm_stages .item p span {
+    color: #fff
+}
+
+.stage_work .btns_stage {
+    text-align: center;
+    margin-top: 80px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center
+}
+
+.stage_work .btns_stage .btns_a {
+    margin-right: 12px
+}
+
+.stage_work .btns_stage .btns_a button {
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 21.78px;
+    color: #fff;
+    padding: 24px 44px;
+    border-radius: 60px;
+    background: linear-gradient(94.98deg, #0d2f68 0, #d51117 100%);
+    width: 310px;
+    display: block;
+    text-align: center;
+    display: block;
+    border: 0;
+    outline: 0;
+    margin: auto
+}
+
+.stage_work .save_discount {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    gap: 11px;
+    margin: 14px 0 0 80px;
+    position: relative;
+    z-index: 1
+}
+
+.stage_work .save_discount::after {
+    position: absolute;
+    content: "";
+    width: 96%;
+    height: 130px;
+    border-radius: 24px;
+    left: -25px;
+    bottom: 24px;
+    background-color: #d51117;
+    z-index: -1;
+    -webkit-transform: rotate(-2deg);
+    transform: rotate(-4deg)
+}
+
+.stage_work .save_discount p {
+    font-family: Inter;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: normal;
+    color: #FFF
+}
+
+.stage_work .save_discount p span {
+    font-weight: 900;
+    font-size: 32px
+}
+
+.stage_work .save_discount p+span {
+    display: block;
+    margin: -8px 0 0 0
+}
+
+.stage_work .save_discount span {
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 150%;
+    color: #FFF
+}
+
+.stage_work .save_discount a {
+    padding: 8px 16px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.3);
+    margin: -22px 0 0 0
+}
+
+@media only screen and (max-width:1200px) {
+    .stage_work .save_discount::after {
+        bottom: 10px
+    }
+
+    .stage_work .itesm_stages .item .line_img {
+        left: 80px;
+        max-width: 139px
+    }
+
+    .stage_work .itesm_stages .item .line_img2 {
+        left: 44px;
+        max-width: 128px
+    }
+
+    .stage_work .stage_block {
+        padding: 80px
+    }
+
+    .stage_work .itesm_stages {
+        margin-top: 30px
+    }
+}
+
+@media only screen and (max-width:1100px) {
+    .stage_work .stage_block {
+        padding: 80px 30px
+    }
+}
+
+@media only screen and (max-width:992px) {
+    .stage_work .itesm_stages {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        gap: 20px
+    }
+
+    .stage_work .itesm_stages .item {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: start;
+        -ms-flex-align: start;
+        align-items: flex-start
+    }
+
+    .stage_work .itesm_stages .item h3 {
+        margin-top: 13px
+    }
+
+    .stage_work .itesm_stages .item .line_img {
+        max-width: 62px;
+        left: -6px;
+        -webkit-transform: rotate(90deg);
+        transform: rotate(90deg);
+        top: 88px
+    }
+
+    .stage_work .itesm_stages .item .line_img2 {
+        left: -7px;
+        max-width: 67px
+    }
+}
+
+@media only screen and (max-width:576px) {
+    .stage_work .stage_block {
+        padding: 16px 12px;
+        border-radius: 16px
+    }
+
+    .stage_work .stage_block::before {
+        border-radius: 16px
+    }
+
+    .stage_work .title h2 {
+        font-size: 24px;
+        line-height: normal;
+        margin-bottom: 8px
+    }
+
+    .stage_work .title p {
+        font-size: 14px;
+        line-height: 150%
+    }
+
+    .stage_work .itesm_stages {
+        margin-top: 16px;
+        gap: 10px
+    }
+
+    .stage_work .itesm_stages .item {
+        gap: 10px;
+        max-width: 320px
+    }
+
+    .stage_work .itesm_stages .item h3 {
+        font-size: 16px;
+        line-height: normal;
+        margin: 0 0 4px 0
+    }
+
+    .stage_work .itesm_stages .item img {
+        width: 18px;
+        height: 18px
+    }
+
+    .stage_work .itesm_stages .item p {
+        font-size: 14px;
+        line-height: normal
+    }
+
+    .stage_work .itesm_stages .item .line_img {
+        width: 32px;
+        height: 2px;
+        left: -6px;
+        top: 40px
+    }
+
+    .stage_work .btns_stage .btns_a button {
+        font-size: 16px;
+        line-height: normal;
+        padding: 12px 30px;
+        width: auto
+    }
+
+    .stage_work .btns_stage img {
+        width: 43px;
+        height: 43px
+    }
+
+    .stage_work .btns_stage {
+        margin-top: 28px
+    }
+
+    .stage_work .save_discount p {
+        font-size: 14px
+    }
+
+    .stage_work .save_discount p span {
+        font-size: 18px
+    }
+
+    .stage_work .save_discount {
+        margin: 4px 0 0 42px
+    }
+
+    .stage_work .save_discount::after {
+        width: 100%;
+        bottom: -2px
+    }
+
+    .stage_work {
+        margin-bottom: 40px
+    }
+}

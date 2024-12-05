@@ -1,0 +1,31 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'main/css/welcome.css' %}">
+
+<div class="welcome">
+    <picture>
+        <source media="(max-width: 600px)" srcset="/static/main/img/imgBG.png">
+        <source media="(min-width: 601px)" srcset="/static/main/img/imgBG.png">
+        <img fetchpriority="high" decoding="async" class="bg_image" src="/static/img/imgBG.webp" alt="Задний фон">
+    </picture>
+    
+    <div class="welcome_title">
+        <h1>Автомобили под заказ из Южной Кореи, Китая, Японии</h1>
+        <p>Подберем. Купим. Доставим. Растаможим. <br>Отправим в любой регион России</p>
+        <button>Рассчитать стоимость</button>
+    </div>
+    <div class="bottom_welcome">
+        <div class="left_info">
+            <div class="item">
+                <div>5 +</div>
+                <p>Лет на рынке</p>
+            </div>
+            <div class="item">
+                <div>4 000 +</div>
+                <p>довольных клиентов</p>
+            </div>
+            <div class="item">
+                <div><img src="/static/main/img/star.png" alt="Рейтинг">4.6</div>
+            </div>
+        </div>
+    </div>
+</div>
