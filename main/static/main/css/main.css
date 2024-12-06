@@ -3,6 +3,11 @@ body {
     margin: 0;
 }
 
+.content {
+    margin: auto auto;
+    max-width: 1600px;
+}
+
 .header {
     background-color: rgb(1, 14, 29);
     display: flex;

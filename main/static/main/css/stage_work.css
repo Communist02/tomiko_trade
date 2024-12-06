@@ -160,14 +160,10 @@
 }
 
 .stage_work .save_discount {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
     gap: 11px;
-    margin: 14px 0 0 80px;
+    margin: -20px 0 0 80px;
     position: relative;
     z-index: 1
 }
