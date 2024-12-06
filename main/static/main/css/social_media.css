@@ -16,18 +16,15 @@
 }
 
 .subscribe .subscribe_row {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     gap: 144px;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
     border-radius: 28px;
     background: #081e36;
     padding: 0 140px 0 0;
     position: relative;
-    z-index: 1
+    z-index: 1;
+    margin: 10px;
 }
 
 .subscribe .subscribe_row .subscribe_right {

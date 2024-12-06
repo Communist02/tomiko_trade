@@ -1,29 +1,20 @@
-.contacts {
-    margin: 0 0 116px 0
-}
-
-.contacts .contact_row {
-    display: -webkit-box;
-    display: -ms-flexbox;
+.contact_row {
     display: flex;
     gap: 30px;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
     justify-content: space-between;
-    -webkit-box-align: start;
-    -ms-flex-align: start;
-    align-items: flex-start
+    align-items: flex-start;
+    margin: 100px 50px;
 }
 
-.contacts .contact_left {
+.contact_left {
     max-width: 405px
 }
 
-.contacts .title {
+.title {
     margin: 0 0 12px 0
 }
 
-.contacts .title h2 {
+.title h2 {
     font-family: Bebas-Neue,Arial,sans-serif;
     font-size: 70px;
     font-weight: 700;
@@ -31,16 +22,14 @@
     color: #FFF
 }
 
-.contacts .title img {
+.title img {
     width: 63px;
     height: 60px;
-    -o-object-fit: cover;
     object-fit: cover;
-    -o-object-position: center;
     object-position: center
 }
 
-.contacts .section_description {
+.section_description {
     font-family: Inter;
     font-size: 18px;
     font-weight: 300;
@@ -48,26 +37,21 @@
     margin: 0 0 60px 0
 }
 
-.contacts .contact_item {
+.contact_item {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
-    -webkit-box-align: start;
-    -ms-flex-align: start;
     align-items: flex-start;
     gap: 8px;
     margin: 0 0 16px 0
 }
 
-.contacts .contact_item:last-child {
+.contact_item:last-child {
     margin: 0
 }
 
-.contacts .contact_item p {
+.contact_item p {
     font-family: Inter;
     font-size: 16px;
     font-weight: 300;
@@ -76,7 +60,7 @@
     color: rgba(255,255,255,0.5)
 }
 
-.contacts .contact_item a,.contacts .contact_item div {
+.contact_item a,.contact_item div {
     font-family: Inter;
     font-size: 18px;
     font-weight: 500;
@@ -85,42 +69,28 @@
     color: #FFF
 }
 
-.contacts .contact_form {
+.contact_form {
     padding: 40px;
     border-radius: 28px;
     background: #081e36
 }
 
-.contacts .contact_form .form_group {
+.contact_form .form_group {
     width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     gap: 16px;
-    margin: 0 0 24px 0
+    margin-bottom: 24px;
 }
 
-.contacts .contact_form .form_group:last-child {
-    margin: 0
-}
-
-.contacts .contact_form .form_group label {
+.contact_form .form_group label {
     width: 100%
 }
 
-.contacts .contact_form .form_group label:first-child {
-    width: calc(50% - 8px)
-}
-
-.contacts .contact_form .form_group label:last-child {
+.contact_form .form_group label:last-child {
     width: 100%
 }
 
-.contacts .contact_form .form_group label+label {
-    width: calc(50% - 8px) !important
-}
-
-.contacts .contact_form .form_group p {
+.contact_form .form_group p {
     font-family: Inter;
     font-size: 14px;
     font-weight: 400;
@@ -128,7 +98,7 @@
     margin: 0 0 8px 0
 }
 
-.contacts .contact_form .form_group input,.contacts .contact_form .form_group textarea,.contacts .contact_form .form_group button {
+.contact_form .form_group input,.contact_form .form_group textarea,.contact_form .form_group button {
     border-radius: 32px;
     background: #20344a;
     border: 0;
@@ -138,84 +108,78 @@
     line-height: normal
 }
 
-.contacts .contact_form .form_group input,.contacts .contact_form .form_group textarea {
-    padding: 16px;
+.contact_form .form_group input,.contact_form .form_group textarea {
+    padding: 16px 10px 16px 5px;
     font-size: 16px;
     font-weight: 400;
     width: 100%
 }
 
-.contacts .contact_form .form_group input::-webkit-input-placeholder,.contacts .contact_form .form_group textarea::-webkit-input-placeholder {
+.contact_form .form_group input::-webkit-input-placeholder,.contact_form .form_group textarea::-webkit-input-placeholder {
     color: rgba(255,255,255,0.5)
 }
 
-.contacts .contact_form .form_group input::-moz-placeholder,.contacts .contact_form .form_group textarea::-moz-placeholder {
+.contact_form .form_group input::-moz-placeholder,.contact_form .form_group textarea::-moz-placeholder {
     color: rgba(255,255,255,0.5)
 }
 
-.contacts .contact_form .form_group input:-ms-input-placeholder,.contacts .contact_form .form_group textarea:-ms-input-placeholder {
+.contact_form .form_group input:-ms-input-placeholder,.contact_form .form_group textarea:-ms-input-placeholder {
     color: rgba(255,255,255,0.5)
 }
 
-.contacts .contact_form .form_group input::-ms-input-placeholder,.contacts .contact_form .form_group textarea::-ms-input-placeholder {
+.contact_form .form_group input::-ms-input-placeholder,.contact_form .form_group textarea::-ms-input-placeholder {
     color: rgba(255,255,255,0.5)
 }
 
-.contacts .contact_form .form_group input::placeholder,.contacts .contact_form .form_group textarea::placeholder {
+.contact_form .form_group input::placeholder,.contact_form .form_group textarea::placeholder {
     color: rgba(255,255,255,0.5)
 }
 
-.contacts .contact_form .form_group input[type=tel]::-webkit-input-placeholder {
+.contact_form .form_group input[type=tel]::-webkit-input-placeholder {
     color: #FFF
 }
 
-.contacts .contact_form .form_group input[type=tel]::-moz-placeholder {
+.contact_form .form_group input[type=tel]::-moz-placeholder {
     color: #FFF
 }
 
-.contacts .contact_form .form_group input[type=tel]:-ms-input-placeholder {
+.contact_form .form_group input[type=tel]:-ms-input-placeholder {
     color: #FFF
 }
 
-.contacts .contact_form .form_group input[type=tel]::-ms-input-placeholder {
+.contact_form .form_group input[type=tel]::-ms-input-placeholder {
     color: #FFF
 }
 
-.contacts .contact_form .form_group input[type=tel]::placeholder {
+.contact_form .form_group input[type=tel]::placeholder {
     color: #FFF
 }
 
-.contacts .contact_form .form_group textarea {
+.contact_form .form_group textarea {
     border-radius: 16px;
     height: 100px;
     resize: none
 }
 
-.contacts .contact_form .form_group label:has(input[type=checkbox]) {
-    display: -webkit-box;
-    display: -ms-flexbox;
+.contact_form .form_group label:has(input[type=checkbox]) {
     display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
     gap: 12px;
     position: relative;
     cursor: pointer
 }
 
-.contacts .contact_form .form_group label:has(input[type=checkbox]):has(input:checked) .checkmark::after {
+.contact_form .form_group label:has(input[type=checkbox]):has(input:checked) .checkmark::after {
     opacity: 1
 }
 
-.contacts .contact_form .form_group label:has(input[type=checkbox]) input {
+.contact_form .form_group label:has(input[type=checkbox]) input {
     width: 30px;
     opacity: 0;
     position: absolute
 }
 
-.contacts .contact_form .form_group label:has(input[type=checkbox]) .checkmark {
-    -webkit-box-flex: 0;
-    -ms-flex: 0 0 auto;
+.contact_form .form_group label:has(input[type=checkbox]) .checkmark {
     flex: 0 0 auto;
     width: 24px;
     height: 24px;
@@ -224,7 +188,7 @@
     position: relative
 }
 
-.contacts .contact_form .form_group label:has(input[type=checkbox]) .checkmark::after {
+.contact_form .form_group label:has(input[type=checkbox]) .checkmark::after {
     position: absolute;
     content: "";
     width: 9px;
@@ -235,22 +199,20 @@
     border-color: #000;
     border-bottom: solid;
     border-right: solid;
-    -webkit-transform: rotate(45deg);
     transform: rotate(45deg);
     opacity: 0;
-    -webkit-transition: .3s all ease;
     transition: .3s all ease
 }
 
-.contacts .contact_form .form_group label:has(input[type=checkbox]) p {
+.contact_form .form_group label:has(input[type=checkbox]) p {
     margin: 0
 }
 
-.contacts .contact_form .form_group label:has(input[type=checkbox]) p a {
+.contact_form .form_group label:has(input[type=checkbox]) p a {
     color: #fd554b
 }
 
-.contacts .contact_form .form_group button {
+.contact_form .form_group button {
     width: 100%;
     font-size: 18px;
     font-weight: 600;
@@ -259,80 +221,69 @@
 }
 
 @media only screen and (max-width: 992px) {
-    .contacts .contact_row {
-        -webkit-box-orient:vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
+    .contact_row {
         flex-direction: column
     }
 
-    .contacts .contact_left {
+    .contact_left {
         max-width: 100%
     }
 }
 
 @media only screen and (max-width: 768px) {
-    .contacts {
-        margin:0 0 80px 0
-    }
 
-    .contacts .title h2 {
+    .title h2 {
         font-size: 40px
     }
 
-    .contacts .title span {
+    .title span {
         font-size: 50px
     }
 
-    .contacts .section_description {
+    .section_description {
         margin: 0 0 24px 0
     }
 }
 
 @media only screen and (max-width: 576px) {
-    .contacts .title img {
+    .title img {
         width:28px;
         height: 28px
     }
 
-    .contacts .contact_form {
+    .contact_form {
         padding: 16px 12px;
         border-radius: 16px
     }
 
-    .contacts .contact_form .form_group {
-        -ms-flex-wrap: wrap;
+    .contact_form .form_group {
         flex-wrap: wrap;
         margin: 0 0 16px 0
     }
 
-    .contacts .contact_form .form_group label:first-child,.contacts .contact_form .form_group label+label {
+    .contact_form .form_group label:first-child,.contact_form .form_group label+label {
         width: 100% !important
     }
 
-    .contacts .contact_form .form_group input,.contacts .contact_form .form_group textarea {
+    .contact_form .form_group input,.contact_form .form_group textarea {
         padding: 15px 12px
     }
 
-    .contacts .contact_form .form_group button {
+    .contact_form .form_group button {
         font-size: 16px;
         padding: 12px 0
     }
 
-    .contacts {
-        margin: 0 0 40px 0
-    }
-
-    .contacts .title h2 {
+    .title h2 {
         font-size: 24px
     }
 
-    .contacts .title span {
+    .title span {
         font-size: 28px
     }
 }
 
-.modal_form_back .contacts {
+.modal_form_back {
     margin: 0
 }
 

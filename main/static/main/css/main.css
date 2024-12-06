@@ -33,6 +33,10 @@ body {
     padding: 6px;
 }
 
+.contacts > a {
+    margin-right: 10px;
+}
+
 .header-links {
     display: flex;
     align-items: center;
@@ -53,6 +57,7 @@ body {
     background-color: #06182b;
     width: 100%;
     padding: 10px 0 10px 0;
+    border-top: 4px solid #d51117;
 }
 
 .footer-links {
@@ -71,21 +76,43 @@ body {
     color: white;
 }
 
+.footer > div > div > img {
+    margin-top: 10px;
+}
+
 .footer-links > div > div > ul > li{
     color: gray;
     list-style: none;
     padding-bottom: 10px;
 }
 
-.footer > p {
+.footer-links > div > div > ul{
+    margin-top: 0;
+}
+
+.footer-number {
+    font-size: xx-large;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.about-company {
+    display: flex;
     color: rgba(232, 230, 227, 0.7);
     margin-left: 10px;
+    margin-right: 10px;
+    justify-content: space-between;
 }
 
 .footer-contacts {
     display: flex;
     flex-direction: column;
     color: white;
+    margin-right: 10px;
+}
+
+.footer-contacts > div > img {
     margin-right: 10px;
 }
 
