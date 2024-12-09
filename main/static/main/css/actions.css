@@ -8,12 +8,15 @@ h1 {
 }
 
 .actions-blocks {
-    padding-block:32px}
+    padding-block:32px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
 
 .actions-block {
     scroll-margin-top: 120px;
     margin-bottom: 32px;
-    width: 100%;
+    
     padding: 80px;
     border-radius: 28px;
     border: 1px solid #FFFFFF1F;

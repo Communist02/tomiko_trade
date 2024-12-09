@@ -52,6 +52,7 @@ body {
     color: rgba(232, 230, 227, 0.7);
     font-weight: bold;
     font-size: large;
+    text-decoration: none;
 }
 
 .footer {
@@ -85,10 +86,14 @@ body {
     margin-top: 10px;
 }
 
-.footer-links > div > div > ul > li{
-    color: gray;
+.footer-links > div > div > ul > li {
     list-style: none;
     padding-bottom: 10px;
+}
+
+.footer-links > div > div > ul > li > a {
+    text-decoration: none;
+    color: gray;
 }
 
 .footer-links > div > div > ul{
@@ -108,6 +113,11 @@ body {
     margin-left: 10px;
     margin-right: 10px;
     justify-content: space-between;
+}
+
+.about-company > a {
+    text-decoration: none;
+    color: rgba(232, 230, 227, 0.7);
 }
 
 .footer-contacts {
