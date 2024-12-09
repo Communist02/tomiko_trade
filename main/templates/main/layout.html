@@ -19,8 +19,12 @@
         </div>
         <div class="contacts">
             <a>+7 (999) 678-56-56</a>
-            <img src="{% static 'main/img/cta_button.svg' %}" width="40px">
-            <img src="{% static 'main/img/cta_button1.svg' %}" width="40px">
+            <a href="{% url 'telegram' %}">
+                <img src="{% static 'main/img/cta_button.svg' %}" width="40px">
+            </a>
+            <a href="{% url 'whatapp' %}">
+                <img src="{% static 'main/img/cta_button1.svg' %}" width="40px">
+            </a>
         </div>
     </header>
     <div class="header-margin"></div>
@@ -57,10 +61,17 @@
                 <p class="gray-text">Звонок по России бесплатный</p>
                 <p class="footer-number">+7 (999) 678-56-56</p>
                 <div>
-                    <img src="{% static 'main/img/ico-tg2.svg' %}">
-                    <img src="{% static 'main/img/ico-whatsapp.svg' %}">
-                    <img src="{% static 'main/img/ico-wk2.svg' %}">
-                    <img src="{% static 'main/img/ico-insta2.svg' %}">
+                    <a href="{% url 'telegram' %}">
+                        <img src="{% static 'main/img/ico-tg2.svg' %}">
+                    </a>
+                    <a href="{% url 'whatapp' %}">
+                        <img src="{% static 'main/img/ico-whatsapp.svg' %}">
+                    </a>
+                    <a href="{% url 'vk' %}">
+                        <img src="{% static 'main/img/ico-wk2.svg' %}"></a>
+                    <a href="{% url 'instagram' %}">
+                        <img src="{% static 'main/img/ico-insta2.svg' %}">
+                    </a>
                 </div>
             </div>
         </div>
