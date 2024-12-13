@@ -7,6 +7,7 @@ urlpatterns = [
     path('promo', views.promo, name='promo'),
     path('contacts', views.contacts, name='contacts'),
     path('auto', views.auto, name='auto'),
+    path('car/<id>', views.car, name='car'),
     path('telegram', views.telegram, name='telegram'),
     path('whatapp', views.whatapp, name='whatapp'),
     path('vk', views.vk, name='vk'),

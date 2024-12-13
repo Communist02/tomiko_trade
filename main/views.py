@@ -1,5 +1,6 @@
 from django.shortcuts import redirect, render
 from django.http import HttpResponse
+from .models import Car
 
 # Create your views here.
 def index(request):
@@ -15,7 +16,12 @@ def contacts(request):
     return render(request, 'main/contacts.html')
 
 def auto(request):
-    return render(request, 'main/auto.html')
+    cars = Car.objects.all()
+    return render(request, 'main/auto.html', {'cars': cars})
+
+def car(request, id):
+    car = Car.objects.get(id=id)
+    return render(request, 'main/car.html', {'car': car})
 
 def telegram(request):
     return redirect('https://t.me/TaiwanIsPartOfChina')

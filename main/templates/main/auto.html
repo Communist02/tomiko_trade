@@ -3,7 +3,23 @@
 {% block title %}Авто{% endblock %}
 
 {% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'main/css/auto.css' %}">
+<link rel="stylesheet" href="{% static 'main/css/card.css' %}">
 
-{% include 'main/card.html' %}
+<div class="page-level">
+    <a href="{% url 'home' %}">Главная</a><a> • Каталог</a>
+</div>
+
+<div class="cards">
+{% for car in cars %}
+
+{% include 'main/card.html' with model=car.model price=car.price transmission=car.transmission mileage=car.mileage year=car.year brand=car.brand_country.brand car_id=car.id %}
+
+{%endfor %}
+</div>
+
+{% include 'main/contacts.html' %}
+{% include 'main/subscribe.html' %}
 
 {% endblock %}
