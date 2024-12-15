@@ -11,15 +11,107 @@
     <a href="{% url 'home' %}">Главная</a><a> • Каталог</a>
 </div>
 
-<div class="cards">
-{% for car in cars %}
+<h1>АВТОМОБИЛИ</h1>
 
-{% include 'main/card.html' with model=car.model price=car.price transmission=car.transmission mileage=car.mileage year=car.year brand=car.brand_country.brand car_id=car.id %}
-
-{%endfor %}
+<div id="form-filter">
+    <form id="form-query" method="get" action="">
+        <select name="brand" id="brand">
+            <option value="">Марка авто</option>
+            {% for brand in brands %}
+                <option value="{{ brand.id }}">{{ brand.brand }}</option>
+            {%endfor %}
+        </select>
+        <select name="drive" id="drive">
+            <option value="">Привод</option>
+            {% for drive in drives %}
+                <option value="{{ drive.drive }}">{{ drive.drive }}</option>
+            {%endfor %}
+        </select>
+        <select name="model" id="model">
+            <option value="">Модель авто</option>
+            {% for model in models %}
+                <option value="{{ model.model }}">{{ model.model }}</option>
+            {%endfor %}
+        </select>
+        <select name="transmission" id="transmission">
+            <option value="">Тип КПП</option>
+            {% for transmission in transmissions %}
+                <option value="{{ transmission.transmission }}">{{ transmission.transmission }}</option>
+            {%endfor %}
+        </select>
+        <select name="color" id="color">
+            <option value="">Цвет</option>
+            {% for color in colors %}
+                <option value="{{ color.color }}">{{ color.color }}</option>
+            {%endfor %}
+        </select>
+    </form>
+    <input type="submit" class="submit" onclick="submit_form()" value="Показать">
 </div>
 
-{% include 'main/contacts.html' %}
+<script>
+    sort = new URL(document.location).searchParams.get("sort")
+    if (sort != null) document.getElementById("sort").value = sort
+
+    brand = new URL(document.location).searchParams.get("brand")
+    if (brand != null) document.getElementById("brand").value = brand
+
+    drive = new URL(document.location).searchParams.get("drive")
+    if (drive != null) document.getElementById("drive").value = drive
+
+    color = new URL(document.location).searchParams.get("color")
+    if (color != null) document.getElementById("color").value = color
+
+    model = new URL(document.location).searchParams.get("model")
+    if (model != null) document.getElementById("model").value = model
+
+    transmission = new URL(document.location).searchParams.get("transmission")
+    if (transmission != null) document.getElementById("transmission").value = transmission
+
+    function submit_sort() {
+        const select = document.getElementById("sort");
+        if (select.value) {
+            select.form.submit()
+        }
+    }
+
+    function submit_form() {
+        const select = document.getElementById("form-query");
+        select.submit()
+    }
+</script>
+
+{% if cars %}
+<form method="get" onchange="submit_sort()">
+    <select name="sort" id="sort">
+        <option value="">Сортировка</option>
+        <option value="mileage_h">Пробег: по возрастанию</option>
+        <option value="mileage_l">Пробег: по убыванию</option>
+        <option value="price_h">Стоимость: по возрастанию</option>
+        <option value="price_l">Стоимость: по убыванию</option>
+        <option value="volume_h">Объем: по возрастанию</option>
+        <option value="volume_l">Объем: по убыванию</option>
+        <option value="year_h">Год: по возврастанию</option>
+        <option value="year_l">Год: по убыванию</option>
+    </select>
+</form>
+<div class="cards">
+    {% for car in cars %}
+        {% include 'main/card.html' with model=car.model price=car.price transmission=car.transmission mileage=car.mileage year=car.year brand=car.brand_country.brand car_id=car.id %}
+    {%endfor %}
+</div>
+{% else %}
+    <div class="null-result">
+        <img src="static/main/img/work2.webp">
+        <div>
+            <p>К сожалению по заданным параметрам ничего не найдено</p>
+            <p>Попробуйте изменить условия поиска</p>
+            <p>Сбросить параметры</p>
+        </div>
+    </div>
+{% endif %}
+
+{% include 'main/contact.html' %}
 {% include 'main/subscribe.html' %}
 
 {% endblock %}

@@ -37,57 +37,59 @@
     </div>
 
     <footer class="footer">
-        <div class="footer-links">
-            <div>
-                <img src="{% static 'main/img/logo.png' %}" width="80px">
+        <div>
+            <div class="footer-links">
                 <div>
-                    <ul>
-                        <h4>КАТАЛОГ</h4>
-                        <li>
-                            <a href="{% url 'auto' %}">
-                                Авто
-                            </a>
-                        </li>
-                    </ul>
-                    <ul>
-                        <h4>КОМПАНИЯ</h4>
-                        <li>О компании</li>
-                        <li>Клипы</li>
-                        <li>Отзывы</li>
-                    </ul>
-                    <ul>
-                        <h4>&#8203</h4>
-                        <li>Условия работы</li>
-                        <li>
-                            <a href="{% url 'promo' %}">
-                                Акции
-                            </a>
-                        </li>
-                        <li>Контакты</li>
-                    </ul>
+                    <img src="{% static 'main/img/logo.png' %}" width="80px">
+                    <div>
+                        <ul>
+                            <h4>КАТАЛОГ</h4>
+                            <li>
+                                <a href="{% url 'auto' %}">Авто</a>
+                            </li>
+                        </ul>
+                        <ul>
+                            <h4>КОМПАНИЯ</h4>
+                            <li>О компании</li>
+                            <li>Клипы</li>
+                            <li>Отзывы</li>
+                        </ul>
+                        <ul>
+                            <h4>&#8203</h4>
+                            <li>
+                                <a href="{% url 'about_us' %}">Условия работы</a>
+                            </li>
+                            <li>
+                                <a href="{% url 'promo' %}">Акции</a>
+                            </li>
+                            <li>
+                                <a href="{% url 'contacts' %}">Контакты</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-contacts">
+                    <p class="gray-text">Звонок по России бесплатный</p>
+                    <p class="footer-number">+7 (999) 678-56-56</p>
+                    <div>
+                        <a href="{% url 'telegram' %}">
+                            <img src="{% static 'main/img/ico-tg2.svg' %}">
+                        </a>
+                        <a href="{% url 'whatapp' %}">
+                            <img src="{% static 'main/img/ico-whatsapp.svg' %}">
+                        </a>
+                        <a href="{% url 'vk' %}">
+                            <img src="{% static 'main/img/ico-wk2.svg' %}"></a>
+                        <a href="{% url 'instagram' %}">
+                            <img src="{% static 'main/img/ico-insta2.svg' %}">
+                        </a>
+                    </div>
                 </div>
             </div>
-            <div class="footer-contacts">
-                <p class="gray-text">Звонок по России бесплатный</p>
-                <p class="footer-number">+7 (999) 678-56-56</p>
-                <div>
-                    <a href="{% url 'telegram' %}">
-                        <img src="{% static 'main/img/ico-tg2.svg' %}">
-                    </a>
-                    <a href="{% url 'whatapp' %}">
-                        <img src="{% static 'main/img/ico-whatsapp.svg' %}">
-                    </a>
-                    <a href="{% url 'vk' %}">
-                        <img src="{% static 'main/img/ico-wk2.svg' %}"></a>
-                    <a href="{% url 'instagram' %}">
-                        <img src="{% static 'main/img/ico-insta2.svg' %}">
-                    </a>
-                </div>
+            <div class="about-company">
+                <a>© 2024 ООО «Правый руль» Автомобили под заказ из Кореи, Китая и Японии</a>
+                <a target="_blank" href="/static/main/files/Tomiko Trade.pdf">Политика конфидециальности</a>
             </div>
-        </div>
-        <div class="about-company">
-            <a>© 2024 ООО «Правый руль» Автомобили под заказ из Кореи, Китая и Японии</a>
-            <a target="_blank" href="/static/main/files/Tomiko Trade.pdf">Политика конфидециальности</a>
         </div>
     </footer>
 </body>

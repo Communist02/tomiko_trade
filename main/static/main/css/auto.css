@@ -2,6 +2,71 @@
     display: flex;
     margin: 10px;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-evenly;
     gap: 20px;
+}
+
+h1 {
+    color: white;
+    margin-left: 10px;
+}
+
+select {
+    padding: 12px 12px;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-weight: 400;
+    border-radius: 32px;
+    background: #20344a;
+    border: 0;
+    outline: 0;
+    color: rgba(232, 230, 227, 0.7);
+    margin: 10px;
+}
+
+#form-filter {
+    background-color: #081e36;
+    box-sizing: border-box;
+    border-radius: 32px;
+    padding: 12px 12px;
+    margin: 10px;
+}
+
+#sort {
+    padding: 12px 12px;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-weight: 400;
+    border-radius: 32px;
+    background: #1a2a3a;
+    border: 0;
+    outline: 0;
+    color: white;
+    margin: 10px;
+}
+
+.submit {
+    padding: 12px 12px;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-weight: 400;
+    border-radius: 32px;
+    background: #20344a;
+    border: 0;
+    outline: 0;
+    color: white;
+    margin: 10px;
+    width: 200px;
+}
+
+.null-result {
+    display: flex;
+    align-items: flex-start;
+    color: white;
+}
+
+.null-result img {
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
 }

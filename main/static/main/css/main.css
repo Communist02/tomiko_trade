@@ -3,12 +3,18 @@ body {
     margin: 0;
 }
 
+a {
+    text-decoration: none;
+}
+
 .content {
     margin: auto auto;
     max-width: 1600px;
 }
 
 .header {
+    margin: auto auto;
+    max-width: 1600px;
     background-color: rgb(1, 14, 29);
     display: flex;
     height: 100px;
@@ -62,8 +68,12 @@ body {
     padding: 0;
     background-color: #06182b;
     width: 100%;
-    padding: 10px 0 10px 0;
     border-top: 4px solid #d51117;
+}
+
+.footer > div {
+    max-width: 1600px;
+    margin: 10px auto;
 }
 
 .footer-links {
@@ -82,7 +92,7 @@ body {
     color: white;
 }
 
-.footer > div > div > img {
+.footer > div > div > div > img {
     margin-top: 10px;
 }
 

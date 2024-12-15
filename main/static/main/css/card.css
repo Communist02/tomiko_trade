@@ -1,3 +1,7 @@
+a {
+    text-decoration: none;
+}
+
 .car-card {
     border-radius: 24px;
     background-color: rgba(8, 30, 54, 1);
