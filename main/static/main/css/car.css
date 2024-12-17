@@ -1,0 +1,415 @@
+.car-info {
+    margin: 10px;
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: auto max-content;
+    grid-template-rows: max-content 1fr;
+    grid-template-areas: "item1 item3" "item2 item3"
+}
+
+.img-auto {
+    width: 856px;
+}
+
+@media(max-width :1110px) {
+    .car-info {
+        display: grid;
+        grid-template-rows: auto;
+        grid-template-areas: "item1" "item3" "item2"
+    }
+
+    .car-info .text {
+        grid-area: item2;
+        height: max-content;
+        padding-top: 24px
+    }
+}
+
+.car-info .title {
+    font-family: Bebas-Neue, Arial, sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 40px;
+    color: #fff;
+    grid-area: item1;
+    height: max-content;
+    padding-bottom: 24px
+}
+
+.car-info .text {
+    grid-area: item2;
+    height: max-content
+}
+
+.car-info .card-box {
+    grid-area: item3;
+    height: max-content
+}
+
+.car-info .price {
+    font-family: Bebas-Neue, Arial, sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 36px;
+    color: #fff;
+    display: flex;
+    gap: 16px
+}
+
+.car-info .price .hidden {
+    display: none
+}
+
+.btns_stage {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-top: 24px
+}
+
+.btns_stage .btns_a button {
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 21.78px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70px;
+    width: 300px;
+    background: linear-gradient(94.98deg, #0d2f68 0, #d51117 100%);
+    border-radius: 60px;
+    border: 0;
+    outline: 0
+}
+
+.btns_stage .btns_a {
+    margin-right: 12px
+}
+
+.car-info .economy {
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    color: #fff
+}
+
+.info_questionary {
+    display: flex;
+    flex-direction: column;
+    gap: 8px
+}
+
+.info_table {
+    width: 500px;
+    border-collapse: collapse;
+    margin-top: 24px
+}
+
+@media(max-width :450px) {
+    .info_table {
+        width: 350px
+    }
+}
+
+@media(max-width :640px) {
+    .main-slides>.gallery-slide {
+        width: 500px;
+        height: auto
+    }
+
+    .car-info .card-box {
+        width: 500px;
+        height: auto
+    }
+
+    .car-info .title {
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 24px
+    }
+}
+
+@media(max-width :500px) {
+    .main-slides>.gallery-slide {
+        width: 450px;
+        height: auto
+    }
+
+    .car-info .card-box {
+        width: 450px;
+        height: auto
+    }
+
+    .car-info .price {
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 24px
+    }
+
+    .btns_stage .btns_a a {
+        height: 43px
+    }
+
+    .btns_stage img {
+        height: 43px;
+        width: 43px
+    }
+}
+
+@media(max-width :490px) {
+    .main-slides>.gallery-slide {
+        width: 90vw;
+        height: auto
+    }
+
+    .car-info .card-box {
+        width: 90vw;
+        height: auto
+    }
+}
+
+.info_table td {
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.36px;
+    color: #FFFFFF80;
+    border: 1px solid transparent;
+    padding: 6px
+}
+
+.info_table td span {
+    display: block;
+    min-height: 19.35px;
+    color: #fff
+}
+
+.rub {
+    font-size: 85%
+}
+
+.form-check {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px
+}
+
+.form-check-input {
+    margin: 0 !important;
+    width: 36px !important;
+    height: 18px;
+    border: 0;
+    background-color: #2d3a48;
+    cursor: pointer
+}
+
+.form-check-input:before {
+    content: '';
+    display: block;
+    margin: 2px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    transition: transform .2s
+}
+
+.form-check-input:checked:before {
+    transform: translateX(18px)
+}
+
+.form-check-label {
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16.94px;
+    color: #fff
+}
+
+.form-check-input:checked {
+    background-color: #cd131b
+}
+
+.form-check-input:focus {
+    box-shadow: none
+}
+
+.japan-info {
+    max-width: 500px;
+    padding-top: 30px;
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    color: #fff
+}
+
+.modal_price_back {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 20;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity .3s ease-in-out
+}
+
+.modal_price_back.show {
+    visibility: visible;
+    opacity: 1;
+    transition: visibility 0s, opacity .3s ease-in-out
+}
+
+.modal_price {
+    transform: translateY(-20px);
+    transition: transform .3s ease-in-out
+}
+
+.modal_price.show .modal_form {
+    transform: translateY(0)
+}
+
+.modal_price {
+    margin-top: 40px
+}
+
+.modal_price .cont {
+    padding: 40px;
+    min-height: 200px;
+    background-color: #081e36;
+    border-radius: 28px;
+    color: white
+}
+
+.modal_price .title {
+    padding-left: 5px;
+    font-size: 26px;
+    font-weight: 600
+}
+
+.modal_price table {
+    width: 100%;
+    border-spacing: 20px
+}
+
+.modal_price table td {
+    padding-inline: 5px;
+    padding-top: 15px
+}
+
+.modal_price table td:first-of-type {
+    width: 70%
+}
+
+.modal_price table td:last-of-type {
+    text-align: right;
+    font-size: 18px;
+    min-width: 150px
+}
+
+.modal_price table td.price {
+    font-size: 22px
+}
+
+.modal_price table td span {
+    font-size: 14px
+}
+
+.modal_price .currency {
+    font-size: 14px;
+    padding-top: 20px;
+    padding-inline: 5px;
+    display: flex;
+    justify-content: space-between;
+    color: #808980
+}
+
+.modal_price_back .top {
+    width: 100%;
+    display: flex;
+    justify-content: right;
+    padding-bottom: 10px
+}
+
+.modal_price_back .top button {
+    border: 0;
+    outline: 0;
+    background: #081e36;
+    border-radius: 30px;
+    width: 26px;
+    height: 26px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.modal_price_back .top button img {
+    width: 14px;
+    height: 14px
+}
+
+.price_model_opener {
+    margin-top: 20px;
+    width: 190px;
+    height: 44px;
+    border-radius: 30px;
+    background: #cb131b;
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 19.6px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    outline: 0
+}
+
+@media(max-width:792px) {
+    .modal_price {
+        position: fixed;
+        left: 0;
+        top: 0;
+        border-radius: 0;
+        width: 100%;
+        height: 100%;
+        overflow-y: auto;
+        margin-top: 20px
+    }
+
+    .modal_price .cont {
+        border-radius: 0;
+        padding-top: 0;
+        padding-inline: 20px
+    }
+
+    .modal_price_back .top {
+        background: #081e36;
+        padding-top: 20px;
+        padding-right: 20px
+    }
+
+    body:has(.modal_price_back.show) {
+        overflow: hidden
+    }
+}

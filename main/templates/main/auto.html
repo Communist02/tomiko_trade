@@ -21,6 +21,36 @@
                 <option value="{{ brand.id }}">{{ brand.brand }}</option>
             {%endfor %}
         </select>
+        <div>
+            <select name="year_from" id="year_from">
+                <option value="">Год от</option>
+                {% for year in years %}
+                    <option value="{{ year.year }}">{{ year.year }}</option>
+                {%endfor %}
+            </select>
+            <span>|</span>
+            <select name="year_to" id="year_to">
+                <option value="">до</option>
+                {% for year in years %}
+                    <option value="{{ year.year }}">{{ year.year }}</option>
+                {%endfor %}
+            </select>
+        </div>
+        <div>
+            <select name="volume_from" id="volume_from">
+                <option value="">Объем от</option>
+                {% for volume in volumes %}
+                    <option value="{{ volume.volume }}">{{ volume.engine_volume }}</option>
+                {%endfor %}
+            </select>
+            <span>|</span>
+            <select name="volume_to" id="volume_to">
+                <option value="">до</option>
+                {% for volume in volumes %}
+                    <option value="{{ volume.volume }}">{{ volume.engine_volume }}</option>
+                {%endfor %}
+            </select>
+        </div>
         <select name="drive" id="drive">
             <option value="">Привод</option>
             {% for drive in drives %}
@@ -33,6 +63,21 @@
                 <option value="{{ model.model }}">{{ model.model }}</option>
             {%endfor %}
         </select>
+        <div>
+            <select name="mileage_from" id="mileage_from">
+                <option value="">Пробег от</option>
+                {% for mileage in mileages %}
+                    <option value="{{ mileage.mileage }}">{{ mileage.mileage }} км</option>
+                {%endfor %}
+            </select>
+            <span>|</span>
+            <select name="mileage_to" id="mileage_to">
+                <option value="">до</option>
+                {% for mileage in mileages %}
+                    <option value="{{ mileage.mileage }}">{{ mileage.mileage }} км</option>
+                {%endfor %}
+            </select>
+        </div>
         <select name="transmission" id="transmission">
             <option value="">Тип КПП</option>
             {% for transmission in transmissions %}

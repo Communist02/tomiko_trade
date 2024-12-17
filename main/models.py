@@ -21,4 +21,4 @@ class Car(models.Model):
     brand_country = models.ForeignKey(Brand, on_delete=models.DO_NOTHING, blank=True, null=True)
 
     def __str__(self):
-        return f'{self.brand_country.brand} {self.model}'
+        return f'{self.brand_country.brand} {self.model} {self.year}'

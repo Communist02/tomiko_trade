@@ -3,7 +3,93 @@
 {% block title %}Машина{% endblock %}
 
 {% block content %}
-<h1>{{ car }}</h1>
-{% include 'main/contacts.html' %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'main/css/car.css' %}">
+
+<div class="page-level">
+    <a href="{% url 'home' %}">Главная</a><a href="{% url 'auto' %}"> • Каталог</a><a> • {{ car }}</a>
+</div>
+
+<div class="car-info">
+    <h1 class="title">{{ car }}</h1>
+    <div class="text">
+        <div class="price">
+            <div>{{ car.price }} <span class="rub">₽</span></div>
+
+            <div class="hidden">{{ car.price }} <span class="rub">₽</span></div>
+            <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault"
+                    onchange="changeCurrency(event);">
+                <label class="form-check-label" for="flexSwitchCheckDefault">Криптовалюта</label>
+            </div>
+
+        </div>
+        <div class="info_questionary">
+            <div class="btns_stage">
+                <div class="btns_a">
+                    <button>Оставить заявку</button>
+                </div>
+                <a href="{% url 'whatapp' %}" target="_blank"><img src="/static/main/img/w1.svg" alt="whatsapp"></a>
+            </div>
+            <div class="economy">Экономия до 30% от рынка авто в наличии <img src="/static/main/img/info.svg" alt="иконка информация"></div>
+        </div>
+
+        <table class="info_table">
+            <tbody>
+                <tr>
+                    <td>Год выпуска:</td>
+                    <td><span>{{ car.year }} г.</span></td>
+                </tr>
+                <tr>
+                    <td>Кузов:</td>
+                    <td><span>Нет данных</span></td>
+                </tr>
+                <tr>
+                    <td>Страна:</td>
+                    <td><span>{{ car.brand_country.country }}</span></td>
+                </tr>
+                <tr>
+                    <td>КПП:</td>
+                    <td><span>{{ car.transmission }}</span></td>
+                </tr>
+                <tr>
+                    <td>Двигатель:</td>
+                    <td><span>{{ power_volume }} л.c.</span></td>
+                </tr>
+                <tr>
+                    <td>Объем двигателя:</td>
+                    <td><span>{{ engine_volume }} л.</span></td>
+                </tr>
+                <tr>
+                    <td>Привод:</td>
+                    <td><span>{{ car.drive }}</span></td>
+                </tr>
+                <tr>
+                    <td>Цвет:</td>
+                    <td><span>{{ car.color }}</span></td>
+                </tr>
+                    <td>Пробег:</td>
+                    <td><span>{{ car.mileage }} км</span></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <button class="price_model_opener" onclick="openPriceModal()">Подробный расчет</button>
+
+    </div>
+    <div class="card-box">
+        <div class="card__main">
+            <div class="gallery">
+                <div class="main-slides">
+                    <img class="img-auto" src="/static/main/img/auto.png">
+                </div>
+            </div>
+            <div class="thumbnail-slides">
+            </div>
+        </div>
+    </div>
+</div>
+
+{% include 'main/contact.html' %}
 
 {% endblock %}

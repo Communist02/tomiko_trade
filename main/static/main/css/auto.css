@@ -11,9 +11,20 @@ h1 {
     margin-left: 10px;
 }
 
-select {
+#form-filter {
+    background-color: #081e36;
+    border-radius: 32px;
     padding: 12px 12px;
-    box-sizing: border-box;
+    margin: 10px;
+}
+
+#form-query {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#form-query>select {
+    padding: 16px;
     font-size: 16px;
     font-weight: 400;
     border-radius: 32px;
@@ -24,17 +35,32 @@ select {
     margin: 10px;
 }
 
-#form-filter {
-    background-color: #081e36;
-    box-sizing: border-box;
+#form-query>div {
     border-radius: 32px;
-    padding: 12px 12px;
+    background: #20344a;
+    border: 0;
+    outline: 0;
     margin: 10px;
+    width: auto;
+}
+
+#form-query>div>span {
+    color: rgba(232, 230, 227, 0.7);
+}
+
+#form-query>div>select {
+    padding: 16px;
+    border-radius: 32px;
+    font-size: 16px;
+    font-weight: 400;
+    background: #20344a;
+    border: 0;
+    outline: 0;
+    color: rgba(232, 230, 227, 0.7);
 }
 
 #sort {
     padding: 12px 12px;
-    box-sizing: border-box;
     font-size: 16px;
     font-weight: 400;
     border-radius: 32px;

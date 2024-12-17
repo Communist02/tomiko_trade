@@ -55,16 +55,26 @@ def auto(request):
     if transmission:
         cars = cars.filter(transmission=transmission)
 
-    brands = Brand.objects.order_by('brand')
+    brands = Brand.objects.order_by('brand').filter(id__in=Car.objects.values('brand_country').distinct().values_list('brand_country'))
     drives = Car.objects.values('drive').distinct().order_by('drive')
-    models = Car.objects.values('model').distinct().order_by('model')
+    if not brand:
+        models = Car.objects.values('model').distinct().order_by('model')
+    else:
+        models = Car.objects.values('model').distinct().order_by('model').filter(brand_country=brand)
+    volumes = Car.objects.values('engine_volume').distinct().order_by('engine_volume')
     transmissions = Car.objects.values('transmission').distinct().order_by('transmission')
     colors = Car.objects.values('color').distinct().order_by('color')
-    return render(request, 'main/auto.html', {'cars': cars, 'brands': brands, 'drives': drives, 'models': models, 'transmissions': transmissions, 'colors': colors})
+    mileages = Car.objects.values('mileage').distinct().order_by('mileage')
+    years = Car.objects.values('year').distinct().order_by('year')
+    return render(request, 'main/auto.html', {'cars': cars, 'brands': brands, 'drives': drives, 'models': models, 'transmissions': transmissions, 'colors': colors, 'years': years, 'volumes': volumes, 'mileages': mileages})
 
 def car(request, id):
     car = Car.objects.get(id=id)
-    return render(request, 'main/car.html', {'car': car})
+    if car.power_volume:
+        power_volume = car.power_volume
+    else:
+        power_volume = "Нет данных о"
+    return render(request, 'main/car.html', {'car': car, 'engine_volume': round(int(car.engine_volume) / 1000, 1), 'power_volume': power_volume})
 
 def telegram(request):
     return redirect('https://t.me/TaiwanIsPartOfChina')
