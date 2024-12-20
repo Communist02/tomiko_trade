@@ -1,0 +1,41 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'main/css/popular.css' %}">
+<link rel="stylesheet" href="{% static 'main/css/glide.core.min.css' %}">
+  
+<div class="glide" id="popular-car">
+    <div class="glide__arrows" data-glide-el="controls">
+        <h2 class="title-popular"><span>ПОПУЛЯРНЫЕ</span> АВТО</h2>
+        <button class="glide__arrow glide__arrow--left" data-glide-dir="<"><img src="/static/main/img/prev.svg"></button>
+        <button class="glide__arrow glide__arrow--right" data-glide-dir=">"><img style="transform: scale(-1, -1);" src="/static/main/img/prev.svg"></button>
+    </div>
+    <div class="glide__track" data-glide-el="track">
+        <ul class="glide__slides">
+            {% for car in pop_cars %}
+            <li class="glide__slide">
+                {% include 'main/card.html' with model=car.model price=car.price transmission=car.transmission mileage=car.mileage year=car.year brand=car.brand_country.brand car_id=car.id %}
+            </li>
+            {%endfor %}
+        </ul>
+    </div>
+</div>
+
+
+<script type="text/javascript" src="{% static 'main/js/glide.min.js' %}">new Glide('.glide').mount()</script>
+
+<script>
+    new Glide('.glide', {
+        type: 'slider',
+        startAt: 0,
+        perView: 4,
+        focusAt: 0,
+        animationDuration: 600,
+        breakpoints: {
+            1300: {
+                perView: 3
+            },
+            940: {
+                perView: 2
+            }
+        }
+    }).mount()
+</script>

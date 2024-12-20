@@ -1,16 +1,12 @@
 .comments {
-    margin: 100px 0
+    padding: 100px 0
 }
 
 .comments .section_top {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: end;
-    -ms-flex-align: end;
     align-items: flex-end;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
     justify-content: space-between;
     margin: 0 0 40px 0
 }
@@ -22,11 +18,7 @@
     line-height: 70px;
     text-align: left;
     color: #fff;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center
 }
 
@@ -39,11 +31,7 @@
 }
 
 .comments .comment_links {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
     gap: 24px
 }
@@ -52,8 +40,6 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
     gap: 8px;
     font-family: Inter;
@@ -72,8 +58,6 @@
     display: -ms-flexbox;
     display: flex;
     gap: 16px;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
     padding: 16px 24px;
     border-radius: 16px;
@@ -85,8 +69,6 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
     gap: 16px
 }
@@ -95,9 +77,7 @@
     border-radius: 50%;
     width: 50px;
     height: 50px;
-    -o-object-fit: cover;
     object-fit: cover;
-    -o-object-position: center;
     object-position: center
 }
 
@@ -114,12 +94,7 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: start;
-    -ms-flex-align: start;
     align-items: flex-start;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
     gap: 8px
 }
@@ -128,8 +103,6 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
     gap: 4px
 }
@@ -154,12 +127,7 @@
     }
 
     .comments .section_top {
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
         flex-direction: column;
-        -webkit-box-align: start;
-        -ms-flex-align: start;
         align-items: flex-start;
         gap: 16px
     }
@@ -193,24 +161,14 @@
     }
 
     .comments .comment_item {
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
         flex-direction: column;
-        -webkit-box-align: start;
-        -ms-flex-align: start;
         align-items: flex-start;
         gap: 12px
     }
 
     .comments .comment_item .comment_item_right {
         width: 100%;
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: row;
         flex-direction: row;
-        -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
         justify-content: space-between;
         gap: 10px
     }
@@ -232,15 +190,11 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
     border-radius: 50%;
     width: 50px;
     height: 50px;
-    -o-object-fit: cover;
     object-fit: cover;
-    -o-object-position: center;
     object-position: center;
     flex-shrink: 0;
     justify-content: center

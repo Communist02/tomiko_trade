@@ -3,6 +3,7 @@
 {% block title %}Авто{% endblock %}
 
 {% block content %}
+
 {% load static %}
 <link rel="stylesheet" href="{% static 'main/css/auto.css' %}">
 <link rel="stylesheet" href="{% static 'main/css/card.css' %}">
@@ -40,14 +41,14 @@
             <select name="volume_from" id="volume_from">
                 <option value="">Объем от</option>
                 {% for volume in volumes %}
-                    <option value="{{ volume.volume }}">{{ volume.engine_volume }}</option>
+                    <option value="{{ volume.engine_volume }}">{{ volume.engine_volume }}</option>
                 {%endfor %}
             </select>
             <span>|</span>
             <select name="volume_to" id="volume_to">
                 <option value="">до</option>
                 {% for volume in volumes %}
-                    <option value="{{ volume.volume }}">{{ volume.engine_volume }}</option>
+                    <option value="{{ volume.engine_volume }}">{{ volume.engine_volume }}</option>
                 {%endfor %}
             </select>
         </div>
@@ -113,6 +114,24 @@
     transmission = new URL(document.location).searchParams.get("transmission")
     if (transmission != null) document.getElementById("transmission").value = transmission
 
+    year_from = new URL(document.location).searchParams.get("year_from")
+    if (year_from != null) document.getElementById("year_from").value = year_from
+
+    year_to = new URL(document.location).searchParams.get("year_to")
+    if (year_to != null) document.getElementById("year_to").value = year_to
+
+    mileage_from = new URL(document.location).searchParams.get("mileage_from")
+    if (mileage_from != null) document.getElementById("mileage_from").value = mileage_from
+
+    mileage_to = new URL(document.location).searchParams.get("mileage_to")
+    if (mileage_to != null) document.getElementById("mileage_to").value = mileage_to
+
+    volume_from = new URL(document.location).searchParams.get("volume_from")
+    if (mileage_from != null) document.getElementById("volume_from").value = volume_from
+
+    volume_to = new URL(document.location).searchParams.get("volume_to")
+    if (volume_to != null) document.getElementById("volume_to").value = volume_to
+
     function submit_sort() {
         const select = document.getElementById("sort");
         if (select.value) {
@@ -125,6 +144,8 @@
         select.submit()
     }
 </script>
+
+{% include 'main/popular.html' %}
 
 {% if cars %}
 <form method="get" onchange="submit_sort()">

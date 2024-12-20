@@ -1,11 +1,16 @@
 from django.shortcuts import redirect, render
-from django.http import HttpResponse
 from .models import Car
 from .models import Brand
+from django.db.models.lookups import GreaterThanOrEqual
+from django.db.models.lookups import LessThanOrEqual
+from django.db.models import F
 
 # Create your views here.
 def index(request):
-    return render(request, 'main/index.html')
+    cars = Car.objects.all()[:10]
+    id = 456242135
+    id_clips =  [i for i in range(id, id+10)]
+    return render(request, 'main/index.html', {'pop_cars': cars, 'clips': id_clips})
 
 def about_us(request):
     return render(request, 'main/about_us.html')
@@ -23,6 +28,12 @@ def auto(request):
     color = request.GET.get('color')
     model = request.GET.get('model')
     transmission = request.GET.get('transmission')
+    year_from = request.GET.get('year_from')
+    year_to = request.GET.get('year_to')
+    mileage_from = request.GET.get('mileage_from')
+    mileage_to = request.GET.get('mileage_to')
+    volume_from = request.GET.get('volume_from')
+    volume_to = request.GET.get('volume_to')
 
     match sort:
         case 'mileage_h':
@@ -54,6 +65,18 @@ def auto(request):
         cars = cars.filter(model=model)
     if transmission:
         cars = cars.filter(transmission=transmission)
+    if year_from:
+        cars = cars.filter(GreaterThanOrEqual(F('year'), year_from))
+    if year_to:
+        cars = cars.filter(LessThanOrEqual(F('year'), year_to))
+    if mileage_from:
+        cars = cars.filter(GreaterThanOrEqual(F('mileage'), mileage_from))
+    if mileage_to:
+        cars = cars.filter(LessThanOrEqual(F('mileage'), mileage_to))
+    if volume_from:
+        cars = cars.filter(GreaterThanOrEqual(F('engine_volume'), volume_from))
+    if volume_to:
+        cars = cars.filter(LessThanOrEqual(F('engine_volume'), volume_to))
 
     brands = Brand.objects.order_by('brand').filter(id__in=Car.objects.values('brand_country').distinct().values_list('brand_country'))
     drives = Car.objects.values('drive').distinct().order_by('drive')
@@ -66,7 +89,7 @@ def auto(request):
     colors = Car.objects.values('color').distinct().order_by('color')
     mileages = Car.objects.values('mileage').distinct().order_by('mileage')
     years = Car.objects.values('year').distinct().order_by('year')
-    return render(request, 'main/auto.html', {'cars': cars, 'brands': brands, 'drives': drives, 'models': models, 'transmissions': transmissions, 'colors': colors, 'years': years, 'volumes': volumes, 'mileages': mileages})
+    return render(request, 'main/auto.html', {'cars': cars, 'pop_cars': Car.objects.all()[:10], 'brands': brands, 'drives': drives, 'models': models, 'transmissions': transmissions, 'colors': colors, 'years': years, 'volumes': volumes, 'mileages': mileages})
 
 def car(request, id):
     car = Car.objects.get(id=id)

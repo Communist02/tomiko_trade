@@ -1,0 +1,64 @@
+.glide__slide--active .car-card .action-button {
+    background-color: red;
+    transition: 1s;
+}
+
+#popular-car {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.title-popular {
+    color: #464e59;
+    font-weight: bold;
+    font-size: 40px;
+    margin-right: 200px;
+    margin: 0 200px 0 0;
+}
+
+.glide__arrows {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.glide__arrows>button {
+    background: none;
+    border: 0;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.title-popular>span {
+    color: #f8584f;
+}
+.car-card .car-image {
+    z-index: -1;
+    transition: 1s;
+    position: relative;
+}
+
+.car-card {
+    position: relative;
+    margin-top: 30px;
+    transition: 1s;
+    background-image: url("../img/auto.png");
+    background-size: 600px;
+}
+
+.glide__slide--active .car-info {
+    margin-bottom: 30px;
+    transition: 1s;
+}
+
+.car-info {
+    transition: 1s;
+}
+
+.glide__slide--active .car-card {
+    margin-top: 0px;
+    background-position: center;
+    width: 600px;
+    background-image: url("../img/auto.png");
+    background-size: 600px;
+    transition: 1s;
+}

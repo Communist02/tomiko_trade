@@ -4,9 +4,15 @@
 
 {% block content %}
 
+{% load static %}
+<link rel="stylesheet" href="{% static 'main/css/card.css' %}">
+
 {% include 'main/welcome.html' %}
+{% include 'main/popular.html' %}
 {% include 'main/stage_work.html' %}
 {% include 'main/about.html' %}
+{% include 'main/comments.html' %}
+{% include 'main/clips.html' %}
 {% include 'main/subscribe.html' %}
 {% include 'main/contact.html' %}
 
