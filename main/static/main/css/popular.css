@@ -50,6 +50,10 @@
     transition: 1s;
 }
 
+.glide__slide--active {
+    width: 600px;
+}
+
 .car-info {
     transition: 1s;
 }
@@ -57,8 +61,7 @@
 .glide__slide--active .car-card {
     margin-top: 0px;
     background-position: center;
-    width: 600px;
     background-image: url("../img/auto.png");
     background-size: 600px;
-    transition: 1s;
+    
 }

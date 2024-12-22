@@ -93,7 +93,43 @@
         </select>
     </form>
     <input type="submit" class="submit" onclick="submit_form()" value="Показать">
+    <button class="reset" onclick="reset()">Сбросить параметры</button>
 </div>
+
+{% include 'main/popular.html' %}
+
+{% if cars %}
+<form method="get" onchange="submit_sort()">
+    <select name="sort" id="sort">
+        <option value="">Сортировка</option>
+        <option value="mileage_h">Пробег: по возрастанию</option>
+        <option value="mileage_l">Пробег: по убыванию</option>
+        <option value="price_h">Стоимость: по возрастанию</option>
+        <option value="price_l">Стоимость: по убыванию</option>
+        <option value="volume_h">Объем: по возрастанию</option>
+        <option value="volume_l">Объем: по убыванию</option>
+        <option value="year_h">Год: по возврастанию</option>
+        <option value="year_l">Год: по убыванию</option>
+    </select>
+</form>
+<div class="cards">
+    {% for car in cars %}
+        {% include 'main/card.html' with model=car.model price=car.price transmission=car.transmission mileage=car.mileage year=car.year brand=car.brand_country.brand car_id=car.id %}
+    {%endfor %}
+</div>
+{% else %}
+    <div class="null-result">
+        <img src="static/main/img/work2.webp">
+        <div>
+            <p>К сожалению по заданным параметрам ничего не найдено</p>
+            <p>Попробуйте изменить условия поиска</p>
+            <button class="reset" onclick="reset()">Сбросить параметры</button>
+        </div>
+    </div>
+{% endif %}
+
+{% include 'main/contact.html' %}
+{% include 'main/subscribe.html' %}
 
 <script>
     sort = new URL(document.location).searchParams.get("sort")
@@ -133,9 +169,17 @@
     if (volume_to != null) document.getElementById("volume_to").value = volume_to
 
     function submit_sort() {
-        const select = document.getElementById("sort");
+        const select = document.getElementById("sort")
         if (select.value) {
-            select.form.submit()
+            let sort = new URL(document.location).searchParams.get("sort")
+            let url = new URL(document.location)
+            if (sort == null) {
+                url.searchParams.append("sort", select.value)
+                location.replace(url)
+            } else {
+                url.searchParams.set("sort", select.value);
+                location.replace(url)
+            }
         }
     }
 
@@ -143,41 +187,10 @@
         const select = document.getElementById("form-query");
         select.submit()
     }
+
+    function reset() {
+        location.replace(window.location.pathname)
+    }
 </script>
-
-{% include 'main/popular.html' %}
-
-{% if cars %}
-<form method="get" onchange="submit_sort()">
-    <select name="sort" id="sort">
-        <option value="">Сортировка</option>
-        <option value="mileage_h">Пробег: по возрастанию</option>
-        <option value="mileage_l">Пробег: по убыванию</option>
-        <option value="price_h">Стоимость: по возрастанию</option>
-        <option value="price_l">Стоимость: по убыванию</option>
-        <option value="volume_h">Объем: по возрастанию</option>
-        <option value="volume_l">Объем: по убыванию</option>
-        <option value="year_h">Год: по возврастанию</option>
-        <option value="year_l">Год: по убыванию</option>
-    </select>
-</form>
-<div class="cards">
-    {% for car in cars %}
-        {% include 'main/card.html' with model=car.model price=car.price transmission=car.transmission mileage=car.mileage year=car.year brand=car.brand_country.brand car_id=car.id %}
-    {%endfor %}
-</div>
-{% else %}
-    <div class="null-result">
-        <img src="static/main/img/work2.webp">
-        <div>
-            <p>К сожалению по заданным параметрам ничего не найдено</p>
-            <p>Попробуйте изменить условия поиска</p>
-            <p>Сбросить параметры</p>
-        </div>
-    </div>
-{% endif %}
-
-{% include 'main/contact.html' %}
-{% include 'main/subscribe.html' %}
 
 {% endblock %}

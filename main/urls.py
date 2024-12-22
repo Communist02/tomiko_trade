@@ -11,5 +11,6 @@ urlpatterns = [
     path('telegram', views.telegram, name='telegram'),
     path('whatapp', views.whatapp, name='whatapp'),
     path('vk', views.vk, name='vk'),
-    path('instagram', views.instagram, name='instagram')
+    path('instagram', views.instagram, name='instagram'),
+    path('submit_form', views.submit_form, name='submit_form')
 ]

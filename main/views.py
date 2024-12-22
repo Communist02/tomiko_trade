@@ -1,6 +1,7 @@
 from django.shortcuts import redirect, render
 from .models import Car
 from .models import Brand
+from .models import Request
 from django.db.models.lookups import GreaterThanOrEqual
 from django.db.models.lookups import LessThanOrEqual
 from django.db.models import F
@@ -110,3 +111,10 @@ def vk(request):
 
 def instagram(request):
     return redirect('https://contract.gosuslugi.ru/')
+
+def submit_form(request):
+    name = request.GET.get('name')
+    number = request.GET.get('number')
+    text = request.GET.get('text')
+    Request.objects.create(name=name, number=number, text=text)
+    return redirect('/')

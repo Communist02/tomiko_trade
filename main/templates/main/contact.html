@@ -1,5 +1,5 @@
 {% load static %}
-<link rel="stylesheet" href="{% static 'main/css/contacts.css' %}">
+<link rel="stylesheet" href="{% static 'main/css/contact.css' %}">
 
 <div class="contact">
     <div class="contact_left">
@@ -23,9 +23,7 @@
             <div>г. Владивосток, ​ул. Бородинская 12а, 1 этаж, офис 1</div>
         </div>
     </div>
-    <form class="contact_form" id="contactForm" method="post" action="">
-        <input type="hidden" name="csrfmiddlewaretoken"
-            value="0o1hAnqbeZktYkHK5s0IKkRr8gphkWjGOrtKRNYy1OFuLlQQp4wGCnogW8y55IOn">
+    <form class="contact_form" id="contactForm" method="dialog" action="">
         <div class="form_group">
             <label>
                 <p>Имя</p>
@@ -53,13 +51,29 @@
                 <span class="checkmark"></span>
                 <input type="checkbox" name="privacy_policy_agreed" required="" id="id_privacy_policy_agreed"
                     checked="">
-                <p>С <a target="_blank"
-                        href="/static/main/files/Tomiko Trade.pdf">правилами
-                        политики конфиденциальности</a> ознакомлен</p>
+                <p>С <a target="_blank" href="/static/main/files/Tomiko Trade.pdf">правилами политики
+                        конфиденциальности</a> ознакомлен</p>
             </label>
         </div>
         <div class="form_group">
-            <button type="submit" name="submit">Отправить</button>
+            <button onclick="submit_form()">Отправить</button>
         </div>
     </form>
 </div>
+
+<script>
+    function submit_form() {
+        const form = document.getElementById("contactForm")
+        const name = document.getElementById("id_name")
+        const number = document.getElementById("id_phone_number")
+        const text = document.getElementById("id_content")
+        const checkbox = document.getElementById("id_privacy_policy_agreed")
+        if (name.validity.valid && number.validity.valid && checkbox.value) {
+            let url = new URL(document.location.origin + "/submit_form")
+            url.searchParams.append("name", name.value)
+            url.searchParams.append("number", number.value)
+            url.searchParams.append("text", text.value)
+            location.replace(url)
+        }
+    }
+</script>

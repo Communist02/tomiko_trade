@@ -22,3 +22,11 @@ class Car(models.Model):
 
     def __str__(self):
         return f'{self.brand_country.brand} {self.model} {self.year}'
+    
+class Request(models.Model):
+    name = models.CharField('Имя', max_length=100)
+    number = models.CharField('Номер телефона', max_length=20)
+    text = models.TextField('Текст')
+
+    def __str__(self):
+        return f'{self.name} ({self.number})'

@@ -96,3 +96,13 @@ h1 {
     margin-left: 10px;
     margin-right: 10px;
 }
+
+.reset {
+    color: #f8584f;
+    font-size: 16px;
+    font-weight: 400;
+    border: 0;
+    outline: 0;
+    background: none;
+    cursor: pointer;
+}
