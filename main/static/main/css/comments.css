@@ -1,5 +1,5 @@
 .comments {
-    padding: 100px 0
+    padding: 100px 0;
 }
 
 .comments .section_top {
@@ -8,7 +8,7 @@
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
-    margin: 0 0 40px 0
+    margin: 0 0 40px 0;
 }
 
 .comments .title h2 {
@@ -19,7 +19,7 @@
     text-align: left;
     color: #fff;
     display: flex;
-    align-items: center
+    align-items: center;
 }
 
 .comments .title h2 img {
@@ -27,7 +27,7 @@
     margin-right: 13px;
     aspect-ratio: 1 / 1;
     width: 48px;
-    height: 48px
+    height: 48px;
 }
 
 .comments .comment_links {
@@ -46,7 +46,7 @@
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
-    color: rgba(255,255,255,0.5)
+    color: rgba(255,255,255,0.5);
 }
 
 .comments .comment_swiper {
@@ -54,20 +54,17 @@
 }
 
 .comments .comment_item {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     gap: 16px;
     align-items: center;
     padding: 16px 24px;
     border-radius: 16px;
     background: #081e36;
-    max-width: 338px
+    max-width: 338px;
+    justify-content: space-between;
 }
 
 .comments .comment_item .comment_item_left {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     align-items: center;
     gap: 16px

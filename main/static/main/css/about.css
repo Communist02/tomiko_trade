@@ -5,7 +5,7 @@
 .about_us .btns_stage img {
   aspect-ratio: 1 / 1;
   width: 70px;
-  height: 70px
+  height: 70px;
 }
 
 .about_us .about_block {
@@ -15,7 +15,7 @@
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid #2a3847;
-  padding: 0 0 40px 0
+  padding: 0 0 40px 0;
 }
 
 .about_us .about_block .img_abouts img {
@@ -23,11 +23,11 @@
   border-radius: 16px;
   aspect-ratio: 500 / 301;
   width: 603px;
-  height: 363px
+  height: 363px;
 }
 
 .about_us .about_block .titles {
-  max-width: 748px
+  max-width: 748px;
 }
 
 .about_us .about_block .titles p {
@@ -37,7 +37,7 @@
   line-height: 28px;
   text-align: left;
   color: #fff;
-  white-space: pre-wrap
+  white-space: pre-wrap;
 }
 
 .about_us .about_block .titles .btns_stage {
@@ -45,11 +45,11 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  align-items: center
+  align-items: center;
 }
 
 .about_us .about_block .titles .btns_stage .btns_a {
-  margin-right: 12px
+  margin-right: 12px;
 }
 
 .about_us .about_block .titles .btns_stage .btns_a button {
@@ -65,7 +65,7 @@
   display: block;
   border: 0;
   outline: 0;
-  margin: auto
+  margin: auto;
 }
 
 .about_us .about_block h2 {
@@ -75,12 +75,10 @@
   line-height: 70px;
   text-align: left;
   color: #fff;
-  margin-bottom: 16px
+  margin-bottom: 16px;
 }
 
 .about_us .bottom_abouts {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   justify-content: space-between;
   margin-top: 33px
@@ -93,7 +91,8 @@
   line-height: 48px;
   text-align: center;
   color: #fd554b;
-  margin-bottom: 4px
+  margin-bottom: 4px;
+  margin-top: 0;
 }
 
 .about_us .bottom_abouts .item p {
@@ -102,14 +101,12 @@
   font-weight: 300;
   line-height: 16.94px;
   text-align: center;
-  color: rgba(255, 255, 255, 0.5019607843)
+  color: rgba(255, 255, 255, 0.5019607843);
 }
 
 .about_us .bottom_abouts .items {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  align-items: flex-start
+  align-items: flex-start;
 }
 
 .about_us .bottom_abouts .items img {
@@ -125,7 +122,8 @@
   font-weight: 300;
   line-height: 24px;
   text-align: left;
-  color: #fff
+  color: #fff;
+  margin-top: 0;
 }
 
 @media only screen and (max-width:1200px) {

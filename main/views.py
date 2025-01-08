@@ -5,6 +5,7 @@ from .models import Request
 from django.db.models.lookups import GreaterThanOrEqual
 from django.db.models.lookups import LessThanOrEqual
 from django.db.models import F
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 # Create your views here.
 def index(request):
@@ -90,7 +91,21 @@ def auto(request):
     colors = Car.objects.values('color').distinct().order_by('color')
     mileages = Car.objects.values('mileage').distinct().order_by('mileage')
     years = Car.objects.values('year').distinct().order_by('year')
-    return render(request, 'main/auto.html', {'cars': cars, 'pop_cars': Car.objects.all()[:10], 'brands': brands, 'drives': drives, 'models': models, 'transmissions': transmissions, 'colors': colors, 'years': years, 'volumes': volumes, 'mileages': mileages})
+
+    count_el = 12
+    paginator = Paginator(cars, per_page=count_el)
+    page_number = request.GET.get('page')
+    try:
+        page_obj = paginator.get_page(page_number)  # returns the desired page object
+    except PageNotAnInteger:
+        # if page_number is not an integer then assign the first page
+        page_obj = paginator.page(1)
+    except EmptyPage:
+        # if page is empty then return last page
+        page_obj = paginator.page(paginator.num_pages)
+    print(page_obj.number)
+    cars = cars[count_el * (page_obj.number - 1):count_el * page_obj.number]
+    return render(request, 'main/auto.html', {'cars': cars, 'page_obj': page_obj, 'pop_cars': Car.objects.all()[:10], 'brands': brands, 'drives': drives, 'models': models, 'transmissions': transmissions, 'colors': colors, 'years': years, 'volumes': volumes, 'mileages': mileages})
 
 def car(request, id):
     car = Car.objects.get(id=id)

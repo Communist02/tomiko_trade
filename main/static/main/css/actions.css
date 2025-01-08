@@ -41,6 +41,7 @@ h1 {
 
 .actions-block h2 {
     font-family: Bebas-Neue,Arial,sans-serif;
+    text-transform: uppercase;
     font-size: 40px;
     font-weight: 700;
     line-height: 40px;

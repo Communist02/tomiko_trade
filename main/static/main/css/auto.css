@@ -106,3 +106,35 @@ h1 {
     background: none;
     cursor: pointer;
 }
+
+.pagination-elements {
+    display: flex;
+    justify-content: end;
+}
+
+.paginator {
+    background-color: #1a2939;
+    border-radius: 32px;
+    padding: 16px 6px;
+    margin: 10px;
+}
+
+.paginator a:hover {
+    background-color: #20344a;
+}
+
+.paginator .current-page:hover {
+    background-color: red;
+}
+
+.paginator a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 16px;
+    border-radius: 32px;
+    font-weight: 400;
+}
+
+.paginator .current-page {
+    background-color: red;
+}
