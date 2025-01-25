@@ -1,5 +1,5 @@
 body {
-    background-color: #010e1d;
+    background-color: #011224;
     margin: 0;
 }
 
@@ -15,7 +15,7 @@ a {
 .header {
     margin: auto auto;
     max-width: 1600px;
-    background-color: rgb(1, 14, 29);
+    background-color: #011224;
     display: flex;
     height: 100px;
     width: 100%;

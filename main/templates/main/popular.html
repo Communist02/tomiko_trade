@@ -12,7 +12,7 @@
         <ul class="glide__slides">
             {% for car in pop_cars %}
             <li class="glide__slide">
-                {% include 'main/card.html' with model=car.model price=car.price transmission=car.transmission mileage=car.mileage year=car.year brand=car.brand_country.brand car_id=car.id %}
+                {% include 'main/card.html' with model=car.model price=car.price transmission=car.transmission mileage=car.mileage year=car.year brand=car.brand_country.brand car_id=car.id images=car.images %}
             </li>
             {%endfor %}
         </ul>

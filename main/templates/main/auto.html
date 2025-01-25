@@ -114,7 +114,7 @@
 </form>
 <div class="cards">
     {% for car in cars %}
-        {% include 'main/card.html' with model=car.model price=car.price transmission=car.transmission mileage=car.mileage year=car.year brand=car.brand_country.brand car_id=car.id %}
+        {% include 'main/card.html' with model=car.model price=car.price transmission=car.transmission mileage=car.mileage year=car.year brand=car.brand_country.brand car_id=car.id images=car.images%}
     {%endfor %}
 </div>
 
@@ -122,12 +122,12 @@
     <div class="paginator">
         {% if page_obj.has_previous %}
         <span>
-            <a href="?page={{ page_obj.previous_page_number }}">Предыдущая</a>
+            <a href="?{% for key, value in request.GET.items %}{% if key != 'page' %}{{ key }}={{ value }}&{% endif %}{% endfor %}page={{ page_obj.previous_page_number }}">Предыдущая</a>
         </span>
 
         {% if page_obj.number > 3 %}
         <span>
-            <a href="?page=1">1</a>
+            <a href="?{% for key, value in request.GET.items %}{% if key != 'page' %}{{ key }}={{ value }}&{% endif %}{% endfor %}page=1">1</a>
         </span>
         {% if page_obj.number > 4 %}
         <span>
@@ -140,11 +140,11 @@
         {% for num in page_obj.paginator.page_range %}
         {% if page_obj.number == num %}
         <span>
-            <a class="current-page" href="?page={{ num }}">{{ num }}</a>
+            <a class="current-page" href="?{% for key, value in request.GET.items %}{% if key != 'page' %}{{ key }}={{ value }}&{% endif %}{% endfor %}page={{ num }}">{{ num }}</a>
         </span>
         {% elif num > page_obj.number|add:'-3' and num < page_obj.number|add:'3' %}
         <span>
-            <a href="?page={{ num }}">{{ num }}</a>
+            <a href="?{% for key, value in request.GET.items %}{% if key != 'page' %}{{ key }}={{ value }}&{% endif %}{% endfor %}page={{ num }}">{{ num }}</a>
         </span>
         {% endif %}
         {% endfor %}
@@ -155,16 +155,16 @@
             <a >...</a>
         </span>
         <span>
-            <a href="?page={{ page_obj.paginator.num_pages }}">{{ page_obj.paginator.num_pages }}</a>
+            <a href="?{% for key, value in request.GET.items %}{% if key != 'page' %}{{ key }}={{ value }}&{% endif %}{% endfor %}page={{ page_obj.paginator.num_pages }}">{{ page_obj.paginator.num_pages }}</a>
         </span>
         {% elif page_obj.number < page_obj.paginator.num_pages|add:'-2' %}
         <span>
-            <a href="?page={{ page_obj.paginator.num_pages }}">{{ page_obj.paginator.num_pages }}</a>
+            <a href="?{% for key, value in request.GET.items %}{% if key != 'page' %}{{ key }}={{ value }}&{% endif %}{% endfor %}page={{ page_obj.paginator.num_pages }}">{{ page_obj.paginator.num_pages }}</a>
         </span>
         {% endif %}
 
         <span>
-            <a href="?page={{ page_obj.next_page_number }}">Следующая</a>
+            <a href="?{% for key, value in request.GET.items %}{% if key != 'page' %}{{ key }}={{ value }}&{% endif %}{% endfor %}page={{ page_obj.next_page_number }}">Следующая</a>
         </span>
         {% endif %}
     </div>

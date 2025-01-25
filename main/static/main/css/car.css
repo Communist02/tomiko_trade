@@ -1,28 +1,31 @@
 .car-info {
     margin: 10px;
-    margin-top: 40px;
-    display: grid;
-    grid-template-columns: auto max-content;
-    grid-template-rows: max-content 1fr;
-    grid-template-areas: "item1 item3" "item2 item3"
+    display: flex;
+    justify-content: space-between;
+}
+
+.images {
+    width: 856px;
+    margin-right: 10px;
 }
 
 .img-auto {
-    width: 856px;
+    max-width: 856px;
+    border-radius: 16px;
+    object-fit: contain;
+    max-height: 480px;
 }
 
-@media(max-width :1110px) {
-    .car-info {
-        display: grid;
-        grid-template-rows: auto;
-        grid-template-areas: "item1" "item3" "item2"
-    }
+.mini-images {
+    display: flex;
+    gap: 6px;
+}
 
-    .car-info .text {
-        grid-area: item2;
-        height: max-content;
-        padding-top: 24px
-    }
+.img-mimi {
+    width: 100px;
+    height: 80px;
+    border-radius: 12px;
+    object-fit: cover;
 }
 
 .car-info .title {
@@ -31,19 +34,7 @@
     font-weight: 700;
     line-height: 40px;
     color: #fff;
-    grid-area: item1;
-    height: max-content;
-    padding-bottom: 24px
-}
-
-.car-info .text {
-    grid-area: item2;
-    height: max-content
-}
-
-.car-info .card-box {
-    grid-area: item3;
-    height: max-content
+    padding-bottom: 24px;
 }
 
 .car-info .price {
@@ -53,21 +44,17 @@
     line-height: 36px;
     color: #fff;
     display: flex;
-    gap: 16px
+    gap: 16px;
 }
 
 .car-info .price .hidden {
-    display: none
+    display: none;
 }
 
 .btns_stage {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
-    margin-top: 24px
+    margin-top: 24px;
 }
 
 .btns_stage .btns_a button {
@@ -118,16 +105,6 @@
 }
 
 @media(max-width :640px) {
-    .main-slides>.gallery-slide {
-        width: 500px;
-        height: auto
-    }
-
-    .car-info .card-box {
-        width: 500px;
-        height: auto
-    }
-
     .car-info .title {
         font-size: 24px;
         font-weight: 700;
@@ -136,15 +113,6 @@
 }
 
 @media(max-width :500px) {
-    .main-slides>.gallery-slide {
-        width: 450px;
-        height: auto
-    }
-
-    .car-info .card-box {
-        width: 450px;
-        height: auto
-    }
 
     .car-info .price {
         font-size: 24px;
@@ -159,18 +127,6 @@
     .btns_stage img {
         height: 43px;
         width: 43px
-    }
-}
-
-@media(max-width :490px) {
-    .main-slides>.gallery-slide {
-        width: 90vw;
-        height: auto
-    }
-
-    .car-info .card-box {
-        width: 90vw;
-        height: auto
     }
 }
 
@@ -251,117 +207,6 @@
     font-weight: 400;
     line-height: 21px;
     color: #fff
-}
-
-.modal_price_back {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: rgba(0, 0, 0, 0.6);
-    z-index: 20;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    visibility: hidden;
-    opacity: 0;
-    transition: visibility 0s, opacity .3s ease-in-out
-}
-
-.modal_price_back.show {
-    visibility: visible;
-    opacity: 1;
-    transition: visibility 0s, opacity .3s ease-in-out
-}
-
-.modal_price {
-    transform: translateY(-20px);
-    transition: transform .3s ease-in-out
-}
-
-.modal_price.show .modal_form {
-    transform: translateY(0)
-}
-
-.modal_price {
-    margin-top: 40px
-}
-
-.modal_price .cont {
-    padding: 40px;
-    min-height: 200px;
-    background-color: #081e36;
-    border-radius: 28px;
-    color: white
-}
-
-.modal_price .title {
-    padding-left: 5px;
-    font-size: 26px;
-    font-weight: 600
-}
-
-.modal_price table {
-    width: 100%;
-    border-spacing: 20px
-}
-
-.modal_price table td {
-    padding-inline: 5px;
-    padding-top: 15px
-}
-
-.modal_price table td:first-of-type {
-    width: 70%
-}
-
-.modal_price table td:last-of-type {
-    text-align: right;
-    font-size: 18px;
-    min-width: 150px
-}
-
-.modal_price table td.price {
-    font-size: 22px
-}
-
-.modal_price table td span {
-    font-size: 14px
-}
-
-.modal_price .currency {
-    font-size: 14px;
-    padding-top: 20px;
-    padding-inline: 5px;
-    display: flex;
-    justify-content: space-between;
-    color: #808980
-}
-
-.modal_price_back .top {
-    width: 100%;
-    display: flex;
-    justify-content: right;
-    padding-bottom: 10px
-}
-
-.modal_price_back .top button {
-    border: 0;
-    outline: 0;
-    background: #081e36;
-    border-radius: 30px;
-    width: 26px;
-    height: 26px;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center
-}
-
-.modal_price_back .top button img {
-    width: 14px;
-    height: 14px
 }
 
 .price_model_opener {

@@ -19,6 +19,7 @@ class Car(models.Model):
     color = models.CharField('Цвет', max_length=50)
     power_volume = models.CharField('Мощность', max_length=5)
     brand_country = models.ForeignKey(Brand, on_delete=models.DO_NOTHING, blank=True, null=True)
+    images = models.TextField('Изображения', default='')
 
     def __str__(self):
         return f'{self.brand_country.brand} {self.model} {self.year}'

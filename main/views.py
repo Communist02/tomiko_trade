@@ -1,3 +1,4 @@
+import json
 from django.shortcuts import redirect, render
 from .models import Car
 from .models import Brand
@@ -6,13 +7,14 @@ from django.db.models.lookups import GreaterThanOrEqual
 from django.db.models.lookups import LessThanOrEqual
 from django.db.models import F
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+import os
 
 # Create your views here.
 def index(request):
     cars = Car.objects.all()[:10]
-    id = 456242135
-    id_clips =  [i for i in range(id, id+10)]
-    return render(request, 'main/index.html', {'pop_cars': cars, 'clips': id_clips})
+    with open(os.path.dirname(__file__) + '/modules/vk.json', 'r') as file:
+        clips = json.load(file)
+    return render(request, 'main/index.html', {'pop_cars': cars, 'clips': clips})
 
 def about_us(request):
     return render(request, 'main/about_us.html')
@@ -113,7 +115,12 @@ def car(request, id):
         power_volume = car.power_volume
     else:
         power_volume = "Нет данных о"
-    return render(request, 'main/car.html', {'car': car, 'engine_volume': round(int(car.engine_volume) / 1000, 1), 'power_volume': power_volume})
+    if car.images != '':
+        images = car.images.split('\n')
+    else:
+        images = []
+    print(images)
+    return render(request, 'main/car.html', {'car': car, 'engine_volume': round(int(car.engine_volume) / 1000, 1), 'power_volume': power_volume, 'images': images})
 
 def telegram(request):
     return redirect('https://t.me/TaiwanIsPartOfChina')

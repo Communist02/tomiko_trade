@@ -31,7 +31,9 @@
         <ul class="glide__slides">
             {% for clip in clips %}
             <li class="glide__slide">
-                <!-- <iframe src="https://vk.com/video_ext.php?oid=-194351072&id={{ clip }}&hd=2&autoplay=1" width="325" height="646" frameborder="0" allowfullscreen></iframe> -->
+                <a href="{{ clip.href }}">
+                    <image src="{{ clip.preview }}">
+                </a>
             </li>
             {%endfor %}
         </ul>
@@ -45,7 +47,7 @@
     new Glide('.clips', {
         type: 'carousel',
         startAt: 0,
-        perView: 4,
+        perView: 9,
         focusAt: 0,
         animationDuration: 600,
         breakpoints: {

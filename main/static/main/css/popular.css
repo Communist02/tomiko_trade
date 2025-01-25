@@ -32,7 +32,6 @@
     color: #f8584f;
 }
 .car-card .car-image {
-    z-index: -1;
     transition: 1s;
     position: relative;
 }
@@ -41,7 +40,6 @@
     position: relative;
     margin-top: 30px;
     transition: 1s;
-    background-image: url("../img/auto.png");
     background-size: 600px;
 }
 
@@ -61,7 +59,5 @@
 .glide__slide--active .car-card {
     margin-top: 0px;
     background-position: center;
-    background-image: url("../img/auto.png");
     background-size: 600px;
-    
 }

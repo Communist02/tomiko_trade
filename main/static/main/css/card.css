@@ -35,7 +35,8 @@ a {
     object-position: center;
     width: 318px;
     margin-top: 16px;
-    margin: 10px;
+    margin: 6px;
+    border-radius: 16px;
 }
 
 .price-action {

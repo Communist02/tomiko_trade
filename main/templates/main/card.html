@@ -1,15 +1,21 @@
+{% load custom_filters %}
+
 <a href="car/{{ car_id }}">
     <div class="car-card">
         <div class="car-info">
             <h2 class="car-title">{{ brand }} {{ model }}</h2>
             <p class="car-details">{{ year }} • {{ transmission }} • {{ mileage }} км</p>
         </div>
-        <img loading="lazy"
-            src="/static/main/img/auto.png"
-            class="car-image"/>
+        {% with split_list=images|remove_text %}
+        {% if images %}
+        <img loading="lazy" src="{{ split_list }}" class="car-image"/>
+        {% else %}
+        <img loading="lazy" src="/static/main/img/auto.png" class="car-image"/>
+        {% endif %}
         <div class="price-action">
             <div class="price">{{ price }} ₽</div>
             <button class="action-button" tabindex="0">Оставить заявку</button>
         </div>
+        {% endwith %}
     </div>
 </a>
