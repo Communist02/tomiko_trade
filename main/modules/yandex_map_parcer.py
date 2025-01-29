@@ -49,5 +49,5 @@ try:
 finally:
     driver.quit()
 # print (result)
-with open(os.path.dirname(__file__) + '/yandex_reviews.json', 'w') as file:
-    json.dump(result, file)
+with open(os.path.dirname(__file__) + '/yandex_reviews.json', 'w',encoding="utf-8") as file:
+    json.dump(result, file, ensure_ascii=False, indent=4)

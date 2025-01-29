@@ -30,7 +30,29 @@ def index(request):
             cars[i].price = int(koef * cars[i].price)
     with open(os.path.dirname(__file__) + '/modules/vk.json', 'r') as file:
         clips = json.load(file)
-    return render(request, 'main/index.html', {'pop_cars': cars, 'clips': clips})
+    with open(os.path.dirname(__file__) + '/modules/yandex_reviews.json', 'r') as file:
+        reviews = json.load(file)
+
+    rating = 0
+
+    for review in reviews:
+        rating += float(review['rating'])
+    rating = rating / len(reviews)
+
+    for i in range(len(reviews)):
+        reviews[i]['rating'] = int(float(reviews[i]['rating']))
+
+    reviews1 = []
+    for i in range(0, len(reviews), 2):
+        if len(reviews) <= i + 1:
+            break
+        temp = [reviews[i]]
+        if len(reviews) <= i + 2:
+            break
+        temp.append(reviews[i + 1])
+        reviews1.append(temp)
+        
+    return render(request, 'main/index.html', {'pop_cars': cars, 'clips': clips, 'reviews': reviews1, 'rating': rating})
 
 def about_us(request):
     return render(request, 'main/about_us.html')
