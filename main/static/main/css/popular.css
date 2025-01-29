@@ -6,6 +6,8 @@
 #popular-car {
     margin-top: 50px;
     margin-bottom: 50px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .title-popular {
@@ -31,9 +33,15 @@
 .title-popular>span {
     color: #f8584f;
 }
+
 .car-card .car-image {
     transition: 1s;
     position: relative;
+}
+
+.glide__slide--active .car-card .car-image {
+    transition: 1s;
+    height: 260px;
 }
 
 .car-card {
@@ -44,7 +52,7 @@
 }
 
 .glide__slide--active .car-info {
-    margin-bottom: 30px;
+    
     transition: 1s;
 }
 

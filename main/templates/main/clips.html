@@ -31,7 +31,7 @@
         <ul class="glide__slides">
             {% for clip in clips %}
             <li class="glide__slide">
-                <a href="{{ clip.href }}">
+                <a target="_blank" href="{{ clip.href }}">
                     <image src="{{ clip.preview }}">
                 </a>
             </li>
@@ -50,6 +50,7 @@
         perView: 9,
         focusAt: 0,
         animationDuration: 600,
+        autoplay: 3000,
         breakpoints: {
             1300: {
                 perView: 3

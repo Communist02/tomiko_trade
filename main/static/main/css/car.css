@@ -4,6 +4,40 @@
     justify-content: space-between;
 }
 
+.slider__arrow {
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+    width: 24px;
+    height: 24px;
+    margin-top: -9px;
+    border-radius: 50%;
+    background-color: #818999;
+    transition: all .2s ease-in-out;
+    box-shadow: 0 .5rem 4rem 0 rgba(0, 0, 0, .5);
+}
+
+.slider__arrow--next {
+    right: 1.5rem;
+}
+
+.slider__arrow--prev {
+    left: 1.5rem;
+}
+
+.glide__arrow {
+    cursor: pointer;
+    padding: 0;
+    background-color: white;
+    border: 0;
+    border-top-color: currentcolor;
+    border-right-color: currentcolor;
+    border-bottom-color: currentcolor;
+    border-left-color: currentcolor;
+    outline: 1;
+    outline-color: currentcolor;
+}
+
 .images {
     width: 856px;
     margin-right: 10px;
@@ -26,6 +60,7 @@
     height: 80px;
     border-radius: 12px;
     object-fit: cover;
+    cursor: pointer;
 }
 
 .car-info .title {
@@ -71,7 +106,8 @@
     background: linear-gradient(94.98deg, #0d2f68 0, #d51117 100%);
     border-radius: 60px;
     border: 0;
-    outline: 0
+    outline: 0;
+    cursor: pointer;
 }
 
 .btns_stage .btns_a {

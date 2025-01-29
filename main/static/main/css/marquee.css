@@ -13,31 +13,24 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-pack: distribute;
     justify-content: space-around;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
-    -webkit-animation: scroll 200s linear infinite;
     animation: scroll 200s linear infinite
 }
 
 .logos_brand .logo-track img {
     height: 100px;
     margin: 0 20px;
-    -webkit-transition: -webkit-transform .3s ease;
     transition: -webkit-transform .3s ease;
     transition: transform .3s ease;
     transition: transform .3s ease,-webkit-transform .3s ease
 }
 
 .logos_brand .logo-track img:hover {
-    -webkit-transform: scale(1.2);
     transform: scale(1.2)
 }
 
 .logos_brand2 .logo-track img:hover {
-    -webkit-transform: none;
     transform: none
 }
 
@@ -52,30 +45,25 @@
 
 @-webkit-keyframes scroll {
     0% {
-        -webkit-transform: translateX(0);
         transform: translateX(0)
     }
 
     100% {
-        -webkit-transform: translateX(-100%);
         transform: translateX(-100%)
     }
 }
 
 @keyframes scroll {
     0% {
-        -webkit-transform: translateX(0);
         transform: translateX(0)
     }
 
     100% {
-        -webkit-transform: translateX(-100%);
         transform: translateX(-100%)
     }
 }
 
 .marquee img {
-    -webkit-transition: -webkit-transform .3s ease;
     transition: -webkit-transform .3s ease;
     transition: transform .3s ease;
     transition: transform .3s ease,-webkit-transform .3s ease;
@@ -96,7 +84,6 @@
 }
 
 .marquee img:hover {
-    -webkit-transform: scale(1.2);
     transform: scale(1.2)
 }
 

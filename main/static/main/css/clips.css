@@ -12,7 +12,7 @@
     top: 48%;
     width: 100%;
     margin-top: 70px;
-    height: 70%;
+    height: 75%;
     background: linear-gradient(95deg,#0d2f68 0,#d51117 100%);
     transform: rotate(-3deg) translate(-50%,-62%);
     clip-path: polygon(0 0,100% 0,100% 95%,0 100%);
